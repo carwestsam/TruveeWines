@@ -1,3 +1,27 @@
+section.main {
+  font-size: 16px;
+  line-height: 1.4; }
+  @media screen and (max-width: 1200px) {
+    section.main {
+      float: left;
+      width: 65%; } }
+  @media screen and (max-width: 800px) {
+    section.main {
+      float: none;
+      width: auto; } }
+  @media screen and (max-width: 500px) {
+    section.main {
+      font-size: 12px;
+      line-height: 1.4; } }
 
+#headerNav .mainNavigation {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  #headerNav .mainNavigation .index {
+    color: white;
+    font-size: 15px;
+    order: 1; }
 
 /*# sourceMappingURL=sister.css.map */

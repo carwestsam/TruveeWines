@@ -1,0 +1,37 @@
+
+$width-small: 500px;
+$width-medium: 800px;
+$width-large: 1200px;
+
+
+
+section.main {
+    font-size: 16px;
+    line-height: 1.4;
+    @media screen and (max-width: $width-large) {
+        float: left;
+        width: 65%;
+    }
+    @media screen and (max-width: $width-medium) {
+        float: none;
+        width: auto;
+    }
+    @media screen and (max-width: $width-small) {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}
+
+#headerNav {
+	.mainNavigation{
+		background-color: black;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		.index{
+			color: white;
+			font-size: 15px;
+			order: 1;
+		}
+	}
+}
