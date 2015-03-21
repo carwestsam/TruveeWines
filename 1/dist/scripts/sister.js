@@ -16,7 +16,7 @@ myapp.controller( 'myctrl',  ['$scope', '$window', function($scope, $window){
 }]);
 */
 
-var truveeApp = angular.module('truveeApp', ['ui.bootstrap']);
+var truveeApp = angular.module('truveeApp', ['ui.bootstrap', 'ngSanitize']);
 
 truveeApp
 .controller( 'mainPage', ['$scope', '$window',function($scope, $window){
@@ -27,13 +27,18 @@ truveeApp
 
 	$scope.mainStyleHeight = "{'height':'" + $scope.Main.pageHeight.toString() + "px'}";
 } ])
-.controller( 'mcbride', ['$scope', function($scope){
+.controller( 'mcbrideCtrl', ['$scope','$sce', function($scope,$sce){
 
 	$scope.mcbride = {}
 	$scope.mcbride.iframeContent = '<iframe mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/121415789?wmode=opaque&amp;api=1" width="1280" webkitallowfullscreen="" frameborder="0" title="&quot; To Find&quot; The Story of The McBride Sisters &amp; Truvée Wines" height="720"></iframe>';
 	$scope.mcbride.iframeDisplay = "not ready";
 	$scope.mcbride.clickFunc=function(){
+		console.log('here!!')
 		$scope.mcbride.iframeDisplay = $scope.mcbride.iframeContent;
+	}
+	$scope.mcbride.trustDangriousSnippet = function(){
+		console.log("great");
+		return $sce.trustAsHtml($scope.mcbride.iframeDisplay);
 	}
 }]);
 

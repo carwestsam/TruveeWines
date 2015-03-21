@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
         <script src="scripts/angular.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/angular-sanitize.min.js" type="text/javascript" charse="utf-8"></script>
         <script src="scripts/ui-bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/ui-bootstrap-tpls.min.js" type="text/javascript" charset="utf-8"></script>
         
@@ -86,8 +87,11 @@
                     </div>
                 </div>
             </div>
-            <div class="page" ng-controller="mcbride">
+            <div class="page" ng-controller="mcbrideCtrl" ng-click="mcbride.clickFunc()">
                 {{mcbride.iframeDisplay}}
+                
+                <div ng-bind-html="mcbride.trustDangriousSnippet()"></div>
+            
             </div>
             <div class="page welcome"></div>
         </div>
