@@ -3,9 +3,20 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <title> Sister Story </title>
-        <style type="text/css" >
+        <style type="text/css" src="styles/bootstrap.min.css"></style>
+        <script src="scripts/angular.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/ui-bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/ui-bootstrap-tpls.min.js" type="text/javascript" charset="utf-8"></script>
+        <!--
+        -->
+        <script src="scripts/sister.js" type="text/javascript" charset="utf-8"></script>
     </head>
     <body>
-        
+        <div ng-app="sisterModule">
+            <div ng-controller="sisterPage">
+                {{ name }}
+            </div>
+        </div>
     </body>
 </html>
+

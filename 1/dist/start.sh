@@ -1,3 +1,3 @@
-sass --watch ./scripts/sass/sisters.scss:./scripts/sister.css &
+sass --watch ./styles/sass/sisters.scss:./styles/sister.css &
 python -m SimpleHTTPServer 83
 
