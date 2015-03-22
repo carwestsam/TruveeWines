@@ -96,8 +96,51 @@
                 
             
             </div>
-            <div class="page welcome"></div>
-        </div>
+            <div class="page">
+                <div ng-controller="CarouselCtrl">
+                    <div>
+                        <carousel interval="intervel">
+                            <slide ng-repeat="slide in slides" active="slide.active">
+                                <img src="{{ slide.image }}" style="width:100%;height:100%">
+                            </slide>
+                        </carousel>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page welcome">
+                
+            </div>
+            
+            <footer>
+                <div id="st">
+                    <div id="snss"></div>
+                </div>
+                <div id="nd">
+                    <div id="info">
+                        <div class="container">
+                            <div id="navi">
+                                <div>SISTERS STORY</div>
+                                <div>VINEYARDS</div>
+                                <div>WINE SHOP</div>
+                                <div>CONTACT US</div>
+                                <div>PRIVACY</div>
+                                <div>TERMS &amp; CONDITIONS</div>
+                                <div>DRINKIQ</div>
+                                <div>ACCESSIBILITY</div>
+                            </div>
+                            <br/>
+                            <div id="addr">
+                                <div>PLEASE ENJOY OUR WINES RESPONSIBLY</div><br/>
+                                <div>©2015 TRUVÉE WINES, SONOMA, CA</div><br/>
+                                <div><a href="http://www.mcbridesisters.com/">MCBRIDESISTERS WEBSITE</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div><!--site-->
     
 <!--
         <div ng-app="myModule" ng-controller="myctrl">
