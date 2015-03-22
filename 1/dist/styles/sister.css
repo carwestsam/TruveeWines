@@ -3,6 +3,16 @@
   font-style: normal;
   font-weight: 500;
   src: local("Raleway Medium"), local("Raleway-Medium"), url("https://fonts.gstatic.com/s/raleway/v9/CcKI4k9un7TZVWzRVT-T8_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/CcKI4k9un7TZVWzRVT-T8xsxEYwM7FgeyaSgU71cLG0.woff") format("woff"); }
+@font-face {
+  font-family: "RalewayExtraLight";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Raleway ExtraLight"), local("Raleway-ExtraLight"), url("https://fonts.gstatic.com/s/raleway/v9/8KhZd3VQBtXTAznvKjw-k_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/8KhZd3VQBtXTAznvKjw-kxsxEYwM7FgeyaSgU71cLG0.woff") format("woff"); }
+@font-face {
+  font-family: "RalewaySemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12bxsxEYwM7FgeyaSgU71cLG0.woff") format("woff"); }
 section.main {
   font-size: 16px;
   line-height: 1.4; }
@@ -32,35 +42,34 @@ section.main {
   font-weight: 500;
   font-style: normal;
   color: rgba(28, 28, 28, 0.9); }
-  .site .page {
-    height: 1080px; }
-    .site .page .headerNav {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center; }
-      .site .page .headerNav .index {
-        color: white;
-        font-size: 15px; }
-      .site .page .headerNav .index:hover {
-        color: #38FFD7; }
-      .site .page .headerNav .indexLogo img {
-        width: 200px;
-        max-width: 200px;
-        height: auto; }
-    .site .page #welcome-background {
+  .site .page .headerNav {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    .site .page .headerNav .index {
+      font-family: "RalewaySemiBold";
+      color: white;
+      font-size: 15px; }
+    .site .page .headerNav .index:hover {
+      color: #38FFD7; }
+    .site .page .headerNav .indexLogo img {
+      width: 200px;
+      max-width: 200px;
+      height: auto; }
+  .site .page #welcome-background {
+    position: absolute;
+    background-image: url("/images/WelcomePage.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+    .site .page #welcome-background .background-cover {
       position: absolute;
-      background-image: url("/images/WelcomePage.png");
-      background-size: cover;
+      background-color: rgba(32, 23, 19, 0.7);
       width: 100%;
-      height: 100%;
-      z-index: -1; }
-      .site .page #welcome-background .background-cover {
-        position: absolute;
-        background-color: rgba(32, 23, 19, 0.7);
-        width: 100%;
-        height: 100%; }
+      height: 100%; }
   .site .page .sister-section .left-content h2 {
     cursor: auto;
     font-size: 32px;
@@ -97,15 +106,41 @@ section.main {
     align-items: center;
     position: absolute;
     width: 100%;
-    height: 100%;
     margin: auto;
     top: 50%; }
     .site .welcome-content .title {
+      font-family: "RalewayExtraLight";
       font-size: 82px;
-      font-weight: 200; }
+      font-weight: 200;
+      font-style: normal;
+      text-rendering: optimizelegibility;
+      cursor: auto; }
     .site .welcome-content .desc {
+      font-family: "RalewaySemiBold";
       font-size: 18px;
+      letter-spacing: 3px;
       color: #38FFD7; }
+  .site .page .watchOurStory-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden; }
+    .site .page .watchOurStory-section img.video-background {
+      position: absolute;
+      min-height: 20em; }
+    .site .page .watchOurStory-section div.content-video {
+      position: absolute; }
+    .site .page .watchOurStory-section div.playicon {
+      position: absolute;
+      height: 48px;
+      width: 48px;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("/images/icons/icon-video-48-light-solid.png");
+      background-size: cover; }
   .site .welcome {
     background-color: pink; }
 

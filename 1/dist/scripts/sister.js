@@ -26,12 +26,14 @@ truveeApp
 	$scope.Main.pageWidth = $window.innerWidth;
 
 	$scope.mainStyleHeight = "{'height':'" + $scope.Main.pageHeight.toString() + "px'}";
+	$scope.mainStyleWidth = "{'height':'" + $scope.Main.pageWidth.toString() + "px'}";
 } ])
 .controller( 'mcbrideCtrl', ['$scope','$sce', function($scope,$sce){
 
 	$scope.mcbride = {}
-	$scope.mcbride.iframeContent = '<iframe mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/121415789?wmode=opaque&amp;api=1" width="1280" webkitallowfullscreen="" frameborder="0" title="&quot; To Find&quot; The Story of The McBride Sisters &amp; Truvée Wines" height="720"></iframe>';
-	$scope.mcbride.iframeDisplay = "not ready";
+	$scope.mcbride.iframeContent = '<iframe mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/121415789?wmode=opaque&amp;api=1" width="' + $scope.Main.pageWidth.toString() + '" webkitallowfullscreen="" frameborder="0" title="&quot; To Find&quot; The Story of The McBride Sisters &amp; Truvée Wines" height="' + $scope.Main.pageHeight.toString() +'"></iframe>';
+	$scope.mcbride.iframeDisplay = "";
+	$scope.mcbride.videoPlayIconDisplay = true;
 	$scope.mcbride.clickFunc=function(){
 		console.log('here!!')
 		$scope.mcbride.iframeDisplay = $scope.mcbride.iframeContent;

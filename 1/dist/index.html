@@ -87,10 +87,13 @@
                     </div>
                 </div>
             </div>
-            <div class="page" ng-controller="mcbrideCtrl" ng-click="mcbride.clickFunc()">
-                {{mcbride.iframeDisplay}}
+            <div class="page" ng-controller="mcbrideCtrl"   ng-click="mcbride.clickFunc()">
+                <div class="watchOurStory-section" ng-style="{{mainStyleHeight}}">
+                    <img src="/images/watchOurStory.jpg" alt="" class="video-background" ng-style="{{mainStyleHeight}}" />
+                    <div class="content-video" ng-bind-html="mcbride.trustDangriousSnippet()"></div>
+                    <div class="playicon"></div>
+                </div>
                 
-                <div ng-bind-html="mcbride.trustDangriousSnippet()"></div>
             
             </div>
             <div class="page welcome"></div>
@@ -120,4 +123,3 @@
 -->
     </body>
 </html>
-
