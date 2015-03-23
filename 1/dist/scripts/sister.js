@@ -36,7 +36,9 @@ truveeApp
 	$scope.mcbride.videoPlayIconDisplay = true;
 	$scope.mcbride.clickFunc=function(){
 		console.log('here!!')
+		$scope.mcbride.videoPlayIconDisplay = false;
 		$scope.mcbride.iframeDisplay = $scope.mcbride.iframeContent;
+
 	}
 	$scope.mcbride.trustDangriousSnippet = function(){
 		console.log("great");
@@ -44,11 +46,12 @@ truveeApp
 	}
 }])
 .controller('CarouselCtrl', function ($scope) {
-	var slides = $scope.slides = [{image:"/images/SisterswStaciMonica.jpg"},
-								  {image:"/images/Truvee+Old+Vine+Grenache.jpg"},
-								  {image:"/images/A001_C017_1204XZ.0000549.jpeg"},
-								  {image:"/images/16706540385_75fa074e59_o.jpg"},
-								  {image:"/images/truvee+chardonnay.jpg"}];
-
+	$scope.myInterval = 5000;
+	var slides = $scope.slides= [];
+	$scope.slides = [{image:"/images/gallery_3.jpg"},
+					  {image:"/images/gallery_5.jpg"},
+					  {image:"/images/gallery_2.jpeg"},
+					  {image:"/images/gallery_1.jpg"},
+					  {image:"/images/gallery_4.jpg"}];
 });
 
