@@ -29,6 +29,15 @@ truveeApp
 		$scope.Env.pageHeights.push( document.getElementById(t).getBoundingClientRect().top );
 	}
 	console.log($scope.Env.pageHeights);
+	
+	$scope.Env.scrollTo = function( eleId ){
+    	console.log( eleId );
+
+    	var gnHeight = document.getElementById('global-nav').clientHeight;
+    	console.log( gnHeight);
+    	var ele = document.getElementById(eleId);
+    	$document.scrollToElement( ele, gnHeight, 1500 );
+    }
 }])
 .controller( 'mainPage', ['$scope', '$window',function($scope, $window){
 	$scope.name = 'main'
