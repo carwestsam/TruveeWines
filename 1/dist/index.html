@@ -7,8 +7,11 @@
         <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
         <script src="scripts/angular.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/angular-sanitize.min.js" type="text/javascript" charse="utf-8"></script>
+        <script src="scripts/angular-scroll.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/angular-animate.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/ui-bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/ui-bootstrap-tpls.min.js" type="text/javascript" charset="utf-8"></script>
+
         
         <script src="//use.typekit.net/cyc1ssq.js"></script><script>try{Typekit.load();}catch(e){}</script>
         
@@ -17,10 +20,21 @@
         <script src="scripts/sister.js" type="text/javascript" charset="utf-8"></script>
         <link rel="stylesheet" type="text/css" href="styles/sister.css">
     </head>
-    <body>
-        
-        <div class="site" ng-app="truveeApp" ng-controller="mainPage">
-            <div class="page" ng-style="{{mainStyleHeight}}">
+    <body ng-app="truveeApp" ng-controller="globalEnv">
+        <div class="global-nav-wrapper" >
+            <div class="global-nav" id="global-nav"  ng-controller="globalNav" collapse="globalNav.disp">
+                <div class="global-nav-item" ng-click="globalNav.scrollTo('page_welcome')">WELCOME</div>
+                <div class="global-nav-item active" ng-click="globalNav.scrollTo('page_sister')">SISTER STORY</div>
+                <div class="global-nav-item" ng-click="globalNav.scrollTo('page_wineyard')">VINEYARDS</div>
+                <div class="global-nav-item" ng-click="globalNav.scrollTo('page_redblend')">WINE SHOP</div>
+                <div class="global-nav-item">SOCIAL</div>
+                <div class="global-nav-item">STORE LOCATION</div>
+                <div class="global-nav-item">CONTACT US</div>
+                <div class="global-nav-item">PRESS RELEESE</div>
+            </div>
+        </div>
+        <div class="site"  ng-controller="mainPage">
+            <div class="page" id="page_welcome" ng-style="{{mainStyleHeight}}"  >
                 <div id="welcome-background"><div class="background-cover"></div>
                 </div>
                 <div class="container">
@@ -49,7 +63,7 @@
                 </div>
 
             </div>
-            <div class="page ">
+            <div class="page " id="page_sister">
                 <div class=" sister-section">
                     <div class="container index-section-wrapper">
                         <div class="row">
@@ -94,14 +108,14 @@
                     </div>
                 </div>
             </div>
-            <div class="page" ng-controller="mcbrideCtrl"   >
+            <div class="page" id="page_watchstory" ng-controller="mcbrideCtrl"   >
                 <div class="watchOurStory-section" ng-style="{{mainStyleHeight}}">
                     <img src="/images/watchOurStory.jpg" alt="" class="video-background" ng-style="{{mainStyleHeight}}" />
                     <div class="content-video" ng-bind-html="mcbride.trustDangriousSnippet()"></div>
                     <div class="playicon" ng-show="mcbride.videoPlayIconDisplay" ng-click="mcbride.clickFunc()"></div>
                 </div>
             </div>
-            <div class="page">
+            <div class="page" id="page_wineyard">
                 <div class="wineyard-section">
                     <div class="container index-section-wrapper">
                         <div class="row">
@@ -153,7 +167,7 @@
                     </div>
                 </div>
             </div>
-            <div class="page">
+            <div class="page" id="page_gallery">
                 <div class="gallery">
                    <div ng-controller="CarouselCtrl" style="height:{{Main.pageHeight}}">
                         <div>
@@ -166,7 +180,7 @@
                     </div>
                 </div>
             </div>
-            <div class="page ">
+            <div class="page " id="page_redblend">
                 <div class="container index-section-wrapper ChardonaryRedBlend">
                     <div class="row">
                         <h1>WINE SHOP</h1>
@@ -278,5 +292,18 @@
     });
     </script> 
 -->
+Click me: <input type="checkbox" ng-model="checked"><br/>
+<div>
+  Show:
+  <div class="check-element animate-show" ng-show="checked">
+    <span class="glyphicon glyphicon-thumbs-up"></span> I show up when your checkbox is checked.
+  </div>
+</div>
+<div>
+  Hide:
+  <div class="check-element animate-show" ng-hide="checked">
+    <span class="glyphicon glyphicon-thumbs-down"></span> I hide when your checkbox is checked.
+  </div>
+</div>
     </body>
 </html>

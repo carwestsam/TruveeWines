@@ -94,6 +94,53 @@ section.main {
     padding-right: 37.5px;
     padding-top: 7.5px; }
 
+.global-nav-wrapper {
+  /*
+  	.global-nav.ng-hide-add, .global-nav.ng-hide-remove {
+  	  -webkit-transition:all linear 0.5s;
+  	  -moz-transition:all linear 0.5s;
+  	  -o-transition:all linear 0.5s;
+  	  transition:all linear 0.5s;
+  	  display:block!important;
+  	}
+  
+  	.global-nav.ng-hide-add.ng-hide-add-active,
+  	.global-nav.ng-hide-remove {
+  	  opacity:0;
+  	}
+  
+  	.global-nav.ng-hide-add,
+  	.global-nav.ng-hide-remove.ng-hide-remove-active {
+  	  opacity:1;
+  	}
+  
+  */ }
+  .global-nav-wrapper .global-nav {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    border-top: 1.5em;
+    font-size: 15px;
+    line-height: 2em;
+    background-color: black;
+    color: white;
+    font-family: "RalewaySemiBold";
+    z-index: 1024;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden; }
+    .global-nav-wrapper .global-nav .global-nav-item {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 1em;
+      letter-spacing: 0.1em; }
+    .global-nav-wrapper .global-nav .global-nav-item.active {
+      color: #38ffd7; }
+
 .site {
   font-family: "Raleway";
   font-size: 15px;
@@ -269,8 +316,7 @@ section.main {
     height: 100%;
     overflow: hidden; }
     .site .page .watchOurStory-section img.video-background {
-      position: absolute;
-      min-height: 20em; }
+      position: absolute; }
     .site .page .watchOurStory-section div.content-video {
       position: absolute; }
     .site .page .watchOurStory-section div.playicon {
@@ -299,10 +345,13 @@ section.main {
     background-color: rgba(28, 21, 19, 0.95); }
     .site footer #nd #info #navi {
       display: flex;
+      flex-direction: row;
+      justify-content: center;
       flex-wrap: wrap;
-      margin-top: 7%;
-      justify-content: space-around; }
+      align-items: center;
+      margin-top: 7%; }
       .site footer #nd #info #navi div {
+        margin-left: 1.5em;
         letter-spacing: 2px;
         font-size: 12px;
         display: inline;

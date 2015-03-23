@@ -16,9 +16,20 @@ myapp.controller( 'myctrl',  ['$scope', '$window', function($scope, $window){
 }]);
 */
 
-var truveeApp = angular.module('truveeApp', ['ui.bootstrap', 'ngSanitize']);
+var truveeApp = angular.module('truveeApp', ['ui.bootstrap', 'ngSanitize', 'duScroll']);
 
 truveeApp
+.controller( 'globalEnv', ['$scope', '$window', '$document', function( $scope, $window, $document){
+	$scope.Env = {}
+	$scope.Env.pageIds = ['page_welcome', 'page_sister', 'page_wineyard', 'page_redblend'];
+	$scope.Env.pageHeights = []
+	for ( ids in $scope.Env.pageIds ){
+		var t = $scope.Env.pageIds[ids];
+		console.log(t, document.getElementById(t), document.getElementById(t).getBoundingClientRect().top);
+		$scope.Env.pageHeights.push( document.getElementById(t).getBoundingClientRect().top );
+	}
+	console.log($scope.Env.pageHeights);
+}])
 .controller( 'mainPage', ['$scope', '$window',function($scope, $window){
 	$scope.name = 'main'
 	$scope.Main = {}
@@ -53,5 +64,39 @@ truveeApp
 					  {image:"/images/gallery_2.jpeg"},
 					  {image:"/images/gallery_1.jpg"},
 					  {image:"/images/gallery_4.jpg"}];
-});
+})
+.controller('globalNav', ['$scope', '$document', '$window', function($scope, $document,$window){
+	$scope.name = "nav";
+	$scope.globalNav = {}
+	$scope.globalNav.disp = true;
 
+	$document.on('scroll', function() {
+		if ( $document.scrollTop() < $window.innerHeight - document.getElementById('global-nav').clientHeight ){
+			$scope.globalNav.disp = true;
+		}else {
+			$scope.globalNav.disp = false;
+		}
+		$scope.$apply();
+
+		$scope.Env.pageHeights=[]
+		for ( ids in $scope.Env.pageIds ){
+			var t = $scope.Env.pageIds[ids];
+			console.log(t, document.getElementById(t), document.getElementById(t).getBoundingClientRect().top);
+			$scope.Env.pageHeights.push( document.getElementById(t).getBoundingClientRect().top );
+		}
+		console.log($scope.Env.pageHeights);
+
+		console.log($window.innerHeight, $scope.globalNav.disp);
+    	console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
+    });
+
+    $scope.globalNav.scrollTo = function( eleId ){
+    	console.log( eleId );
+
+    	var gnHeight = document.getElementById('global-nav').clientHeight;
+    	console.log( gnHeight);
+    	var ele = document.getElementById(eleId);
+    	$document.scrollToElement( ele, gnHeight, 1500 );
+    }
+
+}]);

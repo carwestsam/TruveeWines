@@ -97,7 +97,6 @@ $active-color: #38FFD7;
 	}
 	p {
 		font-size: 15px;
-
 	}
 	blockquote{
 		border-left-color: #1C1C1C;
@@ -120,8 +119,69 @@ $active-color: #38FFD7;
 	}
 }
 
-.site{
 
+.global-nav-wrapper{
+
+	.global-nav{
+		position: fixed;
+		width: 100%;
+		height: auto;
+		//padding-top: 1em;
+		//padding-bottom: 1em;
+		border-top: 1.5em;
+
+
+		font-size: 15px;
+		line-height: 2em;
+		background-color: black;
+		color : white;
+		font-family: "RalewaySemiBold";
+
+		z-index: 1024;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-items:center;
+
+		overflow: hidden;
+
+		.global-nav-item{
+			display: block;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+			margin-left: 1em;
+			letter-spacing: 0.1em;
+		}
+		.global-nav-item.active{
+			color: rgb(56, 255, 215);
+		}
+	}
+
+/*
+	.global-nav.ng-hide-add, .global-nav.ng-hide-remove {
+	  -webkit-transition:all linear 0.5s;
+	  -moz-transition:all linear 0.5s;
+	  -o-transition:all linear 0.5s;
+	  transition:all linear 0.5s;
+	  display:block!important;
+	}
+
+	.global-nav.ng-hide-add.ng-hide-add-active,
+	.global-nav.ng-hide-remove {
+	  opacity:0;
+	}
+
+	.global-nav.ng-hide-add,
+	.global-nav.ng-hide-remove.ng-hide-remove-active {
+	  opacity:1;
+	}
+
+*/
+}
+
+.site{
 	font-family: "Raleway";
 	font-size: 15px;
 	line-height: 1.6em;
@@ -355,7 +415,7 @@ $active-color: #38FFD7;
 
 		img.video-background{
 			position: absolute;
-			min-height: 20em;
+			//min-height: 20em;
 		}
 		div.content-video{
 			position: absolute;
@@ -394,10 +454,15 @@ $active-color: #38FFD7;
 			#info{
 				#navi{
 					display: flex;
+					flex-direction: row;
+					justify-content: center;
 					flex-wrap: wrap;
+					align-items:center;
 					margin-top: 7%;
-					justify-content: space-around;
+
+					
 					div{
+						margin-left: 1.5em;
 						letter-spacing: 2px;
 						font-size: 12px;
 						display: inline;
