@@ -149,55 +149,57 @@ section.main {
   font-weight: 500;
   font-style: normal;
   color: rgba(28, 28, 28, 0.9); }
-  .site .page .indexLogoMedium {
-    margin-top: 30px;
-    width: 100%;
-    height: auto; }
-    .site .page .indexLogoMedium img {
-      width: 200px;
-      max-width: 200px;
-      margin-left: auto;
-      margin-right: auto;
-      display: block; }
-      @media screen and (min-width: 1220px) {
-        .site .page .indexLogoMedium img {
-          display: none; } }
-  .site .page .headerNav {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center; }
-    .site .page .headerNav .index {
-      margin-left: 1em;
-      white-space: nowrap;
-      font-family: "RalewaySemiBold";
-      color: white;
-      font-size: 15px; }
-    .site .page .headerNav .index:hover {
-      color: #38FFD7; }
-    .site .page .headerNav .indexLogoLarge {
-      margin-left: 1em; }
-      .site .page .headerNav .indexLogoLarge img {
+  .site .page {
+    min-height: 10em; }
+    .site .page .indexLogoMedium {
+      margin-top: 30px;
+      width: 100%;
+      height: auto; }
+      .site .page .indexLogoMedium img {
         width: 200px;
         max-width: 200px;
-        height: auto; }
-        @media screen and (max-width: 1220px) {
-          .site .page .headerNav .indexLogoLarge img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block; }
+        @media screen and (min-width: 1220px) {
+          .site .page .indexLogoMedium img {
             display: none; } }
-  .site .page #welcome-background {
-    position: absolute;
-    background-image: url("/images/WelcomePage.png");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    z-index: -1; }
-    .site .page #welcome-background .background-cover {
+    .site .page .headerNav {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center; }
+      .site .page .headerNav .index {
+        margin-left: 1em;
+        white-space: nowrap;
+        font-family: "RalewaySemiBold";
+        color: white;
+        font-size: 15px; }
+      .site .page .headerNav .index:hover {
+        color: #38FFD7; }
+      .site .page .headerNav .indexLogoLarge {
+        margin-left: 1em; }
+        .site .page .headerNav .indexLogoLarge img {
+          width: 200px;
+          max-width: 200px;
+          height: auto; }
+          @media screen and (max-width: 1220px) {
+            .site .page .headerNav .indexLogoLarge img {
+              display: none; } }
+    .site .page #welcome-background {
       position: absolute;
-      background-color: rgba(32, 23, 19, 0.7);
+      background-image: url("/images/WelcomePage.png");
+      background-size: cover;
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      z-index: -1; }
+      .site .page #welcome-background .background-cover {
+        position: absolute;
+        background-color: rgba(32, 23, 19, 0.7);
+        width: 100%;
+        height: 100%; }
   @media screen and (max-width: 768px) {
     .site .page .sister-section .left-content {
       display: block;

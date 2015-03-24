@@ -58,7 +58,6 @@ truveeApp
 		console.log('here!!')
 		$scope.mcbride.videoPlayIconDisplay = false;
 		$scope.mcbride.iframeDisplay = $scope.mcbride.iframeContent;
-
 	}
 	$scope.mcbride.trustDangriousSnippet = function(){
 		console.log("great");
@@ -78,30 +77,47 @@ truveeApp
 	$scope.name = "nav";
 	$scope.globalNav = {}
 	$scope.globalNav.disp = true;
+	$scope.globalNav.navHeight = 0;
+	$scope.globalNav.selectedNav = "sister";
 
 	$document.on('scroll', function() {
-		if ( $document.scrollTop() < $window.innerHeight - document.getElementById('global-nav').clientHeight ){
+		$scope.globalNav.navHeight = document.getElementById('global-nav').clientHeight;
+		if ( $document.scrollTop() < $window.innerHeight - $scope.globalNav.navHeight ){
 			$scope.globalNav.disp = true;
 		}else {
 			$scope.globalNav.disp = false;
 		}
-		$scope.$apply();
+		
 
-		$scope.Env.pageHeights=[]
+		$scope.Env.pageHeights={}
+		var last = $scope.Env.pageIds[0];
+		var flag = false;
 		for ( ids in $scope.Env.pageIds ){
 			var t = $scope.Env.pageIds[ids];
-			console.log(t, document.getElementById(t), document.getElementById(t).getBoundingClientRect().top);
-			$scope.Env.pageHeights.push( document.getElementById(t).getBoundingClientRect().top );
+			var elePosition = document.getElementById(t).getBoundingClientRect().top;
+			console.log(t, document.getElementById(t).getBoundingClientRect().top);
+			$scope.Env.pageHeights[t] =  document.getElementById(t).getBoundingClientRect().top ;
+			$scope.globalNav.selectedNav = last;
+			last = t;
+			if ( elePosition - $scope.globalNav.navHeight > 0 ){
+				flag = true;break;
+			}else if ( elePosition - $scope.globalNav.navHeight == 0 ){
+				$scope.globalNav.selectedNav = t;
+				console.log(t,elePosition, $scope.globalNav.navHeight);
+    			console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
+    			flag = true;
+				break;
+			}
 		}
-		console.log($scope.Env.pageHeights);
-
-		console.log($window.innerHeight, $scope.globalNav.disp);
+		if (flag == false){
+		$scope.globalNav.selectedNav = last;}
+		$scope.$apply();
+		console.log($scope.Env.pageHeights, $scope.globalNav.navHeight);
     	console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
     });
 
     $scope.globalNav.scrollTo = function( eleId ){
     	console.log( eleId );
-
     	var gnHeight = document.getElementById('global-nav').clientHeight;
     	console.log( gnHeight);
     	var ele = document.getElementById(eleId);

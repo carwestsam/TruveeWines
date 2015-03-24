@@ -23,10 +23,10 @@
     <body ng-app="truveeApp" ng-controller="globalEnv">
         <div class="global-nav-wrapper" >
             <div class="global-nav" id="global-nav"  ng-controller="globalNav" collapse="globalNav.disp">
-                <div class="global-nav-item" ng-click="globalNav.scrollTo('page_welcome')">WELCOME</div>
-                <div class="global-nav-item active" ng-click="globalNav.scrollTo('page_sister')">SISTER STORY</div>
-                <div class="global-nav-item" ng-click="globalNav.scrollTo('page_wineyard')">VINEYARDS</div>
-                <div class="global-nav-item" ng-click="globalNav.scrollTo('page_redblend')">WINE SHOP</div>
+                <div class="global-nav-item {{globalNav.selectedNav == 'page_welcome'? 'active' : ''}}" id="page_welcome_gnav" ng-click="globalNav.scrollTo('page_welcome')">WELCOME</div>
+                <div class="global-nav-item {{globalNav.selectedNav == 'page_sister'? 'active' : ''}}" id="page_sister_gnav" ng-click="globalNav.scrollTo('page_sister')">SISTER STORY</div>
+                <div class="global-nav-item {{globalNav.selectedNav == 'page_wineyard'? 'active' : ''}}" id="page_wineyard_gnav" ng-click="globalNav.scrollTo('page_wineyard')">VINEYARDS</div>
+                <div class="global-nav-item {{globalNav.selectedNav == 'page_redblend'? 'active' : ''}}" id="page_redblend_gnav" ng-click="globalNav.scrollTo('page_redblend')">WINE SHOP</div>
                 <div class="global-nav-item">SOCIAL</div>
                 <div class="global-nav-item">STORE LOCATION</div>
                 <div class="global-nav-item">CONTACT US</div>
