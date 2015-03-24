@@ -16,15 +16,15 @@
 section.main {
   font-size: 16px;
   line-height: 1.4; }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1170px) {
     section.main {
       float: left;
       width: 65%; } }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 970px) {
     section.main {
       float: none;
       width: auto; } }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 750px) {
     section.main {
       font-size: 12px;
       line-height: 1.4; } }
@@ -94,6 +94,53 @@ section.main {
     padding-right: 37.5px;
     padding-top: 7.5px; }
 
+.global-nav-wrapper {
+  /*
+  	.global-nav.ng-hide-add, .global-nav.ng-hide-remove {
+  	  -webkit-transition:all linear 0.5s;
+  	  -moz-transition:all linear 0.5s;
+  	  -o-transition:all linear 0.5s;
+  	  transition:all linear 0.5s;
+  	  display:block!important;
+  	}
+  
+  	.global-nav.ng-hide-add.ng-hide-add-active,
+  	.global-nav.ng-hide-remove {
+  	  opacity:0;
+  	}
+  
+  	.global-nav.ng-hide-add,
+  	.global-nav.ng-hide-remove.ng-hide-remove-active {
+  	  opacity:1;
+  	}
+  
+  */ }
+  .global-nav-wrapper .global-nav {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    border-top: 1.5em;
+    font-size: 15px;
+    line-height: 2em;
+    background-color: black;
+    color: white;
+    font-family: "RalewaySemiBold";
+    z-index: 1024;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden; }
+    .global-nav-wrapper .global-nav .global-nav-item {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 1em;
+      letter-spacing: 0.1em; }
+    .global-nav-wrapper .global-nav .global-nav-item.active {
+      color: #38ffd7; }
+
 .site {
   font-family: "Raleway";
   font-size: 15px;
@@ -102,22 +149,43 @@ section.main {
   font-weight: 500;
   font-style: normal;
   color: rgba(28, 28, 28, 0.9); }
+  .site .page .indexLogoMedium {
+    margin-top: 30px;
+    width: 100%;
+    height: auto; }
+    .site .page .indexLogoMedium img {
+      width: 200px;
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block; }
+      @media screen and (min-width: 1220px) {
+        .site .page .indexLogoMedium img {
+          display: none; } }
   .site .page .headerNav {
     margin-top: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center; }
     .site .page .headerNav .index {
+      margin-left: 1em;
+      white-space: nowrap;
       font-family: "RalewaySemiBold";
       color: white;
       font-size: 15px; }
     .site .page .headerNav .index:hover {
       color: #38FFD7; }
-    .site .page .headerNav .indexLogo img {
-      width: 200px;
-      max-width: 200px;
-      height: auto; }
+    .site .page .headerNav .indexLogoLarge {
+      margin-left: 1em; }
+      .site .page .headerNav .indexLogoLarge img {
+        width: 200px;
+        max-width: 200px;
+        height: auto; }
+        @media screen and (max-width: 1220px) {
+          .site .page .headerNav .indexLogoLarge img {
+            display: none; } }
   .site .page #welcome-background {
     position: absolute;
     background-image: url("/images/WelcomePage.png");
@@ -130,6 +198,12 @@ section.main {
       background-color: rgba(32, 23, 19, 0.7);
       width: 100%;
       height: 100%; }
+  @media screen and (max-width: 768px) {
+    .site .page .sister-section .left-content {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 498px; } }
   .site .page .sister-section .left-content h2 {
     cursor: auto;
     font-size: 32px;
@@ -141,40 +215,73 @@ section.main {
     text-rendering: optimizelegibility; }
   .site .page .sister-section .left-content #sister-sign {
     width: 100%; }
+    @media screen and (max-width: 768px) {
+      .site .page .sister-section .left-content #sister-sign {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; } }
     .site .page .sister-section .left-content #sister-sign img {
-      width: 100%; }
+      width: 100%;
+      max-width: 500px; }
   .site .page .sister-section .right-content {
     position: relative;
     width: 100%;
     top: 27.2px; }
-    .site .page .sister-section .right-content #sister_photo {
-      max-width: 498px;
-      width: 100%;
-      height: 100.084%; }
-    .site .page .sister-section .right-content .image-caption-wrapper {
-      padding-top: 1em; }
-      .site .page .sister-section .right-content .image-caption-wrapper p {
-        letter-spacing: 0.4px;
-        font-weight: 500;
-        font-size: 12.38px;
-        line-height: 1.68em;
-        font-style: normal; }
+    .site .page .sister-section .right-content .image-wrapper {
+      max-width: 498px; }
+      @media screen and (max-width: 768px) {
+        .site .page .sister-section .right-content .image-wrapper {
+          display: block;
+          margin-left: auto;
+          margin-right: auto; } }
+      .site .page .sister-section .right-content .image-wrapper #sister_photo {
+        max-width: 498px;
+        width: 100%;
+        height: 100.084%; }
+      .site .page .sister-section .right-content .image-wrapper .image-caption-wrapper {
+        padding-top: 1em; }
+        .site .page .sister-section .right-content .image-wrapper .image-caption-wrapper p {
+          letter-spacing: 0.4px;
+          font-weight: 500;
+          font-size: 12.38px;
+          line-height: 1.68em;
+          font-style: normal; }
+  @media screen and (max-width: 768px) {
+    .site .page .wineyard-section .left-content {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 498px; } }
   .site .page .wineyard-section .right-content {
     position: relative;
     width: 100%;
     top: 27.2px; }
-    .site .page .wineyard-section .right-content #wines_photo {
-      max-width: 498px;
-      width: 100%;
-      height: 100.084%; }
-    .site .page .wineyard-section .right-content .image-caption-wrapper {
-      padding-top: 1em; }
-      .site .page .wineyard-section .right-content .image-caption-wrapper p {
-        letter-spacing: 0.4px;
-        font-weight: 500;
-        font-size: 12.38px;
-        line-height: 1.68em;
-        font-style: normal; }
+    .site .page .wineyard-section .right-content .image-wrapper {
+      max-width: 498px; }
+      @media screen and (max-width: 768px) {
+        .site .page .wineyard-section .right-content .image-wrapper {
+          display: block;
+          margin-left: auto;
+          margin-right: auto; } }
+      .site .page .wineyard-section .right-content .image-wrapper #wines_photo {
+        max-width: 498px;
+        width: 100%;
+        height: 100.084%; }
+      .site .page .wineyard-section .right-content .image-wrapper .image-caption-wrapper {
+        padding-top: 1em; }
+        .site .page .wineyard-section .right-content .image-wrapper .image-caption-wrapper p {
+          letter-spacing: 0.4px;
+          font-weight: 500;
+          font-size: 12.38px;
+          line-height: 1.68em;
+          font-style: normal; }
+  @media screen and (max-width: 768px) {
+    .site .page .ChardonaryRedBlend .content {
+      display: block;
+      margin-top: 2em;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 498px; } }
   .site .welcome-content {
     color: white;
     display: flex;
@@ -184,6 +291,9 @@ section.main {
     width: 100%;
     margin: auto;
     top: 50%; }
+    @media screen and (max-width: 775px) {
+      .site .welcome-content {
+        top: 40%; } }
     .site .welcome-content .title {
       font-family: "RalewayExtraLight";
       font-size: 82px;
@@ -196,14 +306,17 @@ section.main {
       font-size: 18px;
       letter-spacing: 3px;
       color: #38FFD7; }
+      @media screen and (max-width: 775px) {
+        .site .welcome-content .desc {
+          position: absolute;
+          left: 1em; } }
   .site .page .watchOurStory-section {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden; }
     .site .page .watchOurStory-section img.video-background {
-      position: absolute;
-      min-height: 20em; }
+      position: absolute; }
     .site .page .watchOurStory-section div.content-video {
       position: absolute; }
     .site .page .watchOurStory-section div.playicon {
@@ -232,10 +345,13 @@ section.main {
     background-color: rgba(28, 21, 19, 0.95); }
     .site footer #nd #info #navi {
       display: flex;
+      flex-direction: row;
+      justify-content: center;
       flex-wrap: wrap;
-      margin-top: 7%;
-      justify-content: space-around; }
+      align-items: center;
+      margin-top: 7%; }
       .site footer #nd #info #navi div {
+        margin-left: 1.5em;
         letter-spacing: 2px;
         font-size: 12px;
         display: inline;
