@@ -150,7 +150,7 @@ section.main {
   font-style: normal;
   color: rgba(28, 28, 28, 0.9); }
   .site .page {
-    min-height: 10em; }
+    min-height: 768px; }
     .site .page .indexLogoMedium {
       margin-top: 30px;
       width: 100%;
@@ -337,6 +337,95 @@ section.main {
     width: 100%;
     height: auto;
     overflow: hidden; }
+  .site .page .locator-wrapper {
+    margin: 0;
+    background: url(../images/TruvvechardbootleCU.jpg) no-repeat 50% 50% fixed;
+    font-family: "Raleway-Thin";
+    background-size: cover;
+    background-attachment: scroll; }
+    .site .page .locator-wrapper .float {
+      background-color: rgba(0, 0, 0, 0.6); }
+    .site .page .locator-wrapper h1 {
+      color: white;
+      margin: 0;
+      font-size: 82px;
+      font-style: normal;
+      text-align: center;
+      font-weight: 200;
+      letter-spacing: 0px; }
+    .site .page .locator-wrapper .center {
+      display: flex;
+      justify-content: space-around; }
+      .site .page .locator-wrapper .center iframe {
+        width: 1000px;
+        height: 550px;
+        border: 0;
+        background-color: white; }
+      .site .page .locator-wrapper .center p {
+        margin-top: 3%;
+        margin-bottom: 12%; }
+        .site .page .locator-wrapper .center p small {
+          color: white;
+          font-size: 80%;
+          font-style: normal;
+          font-weight: 500; }
+          .site .page .locator-wrapper .center p small a {
+            color: white; }
+  .site .page .contact-wrapper h1 {
+    text-align: left;
+    font-family: "Raleway";
+    font-size: 42px;
+    line-height: 1.1em;
+    text-transform: none;
+    letter-spacing: 0px;
+    font-weight: 200;
+    font-style: normal;
+    padding-bottom: 17px; }
+  .site .page .contact-wrapper form {
+    padding-top: 17px; }
+    .site .page .contact-wrapper form .form-group label {
+      font-family: "Raleway";
+      font-size: 15px;
+      letter-spacing: .4px;
+      font-weight: 500;
+      font-style: normal;
+      color: rgba(28, 28, 28, 0.9); }
+    .site .page .contact-wrapper form .form-group span {
+      font-family: "Raleway";
+      font-size: 12px;
+      letter-spacing: .4px;
+      font-weight: 500;
+      font-style: normal;
+      color: rgba(28, 28, 28, 0.9); }
+    .site .page .contact-wrapper form .form-group .form-inline {
+      display: flex;
+      justify-content: space-between; }
+    .site .page .contact-wrapper form .form-group .form-control {
+      border-radius: 2px;
+      background-color: #fcfcfc; }
+    .site .page .contact-wrapper form .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+      overflow: auto;
+      vertical-align: top; }
+    .site .page .contact-wrapper form .form-group .btn {
+      font-family: "Raleway";
+      letter-spacing: .5px;
+      font-weight: 400;
+      font-style: normal;
+      color: #fff;
+      background-color: #272727;
+      border-color: #272727;
+      width: auto;
+      height: auto;
+      padding: 1em 2.5em;
+      border-width: 0;
+      text-align: center;
+      line-height: 1em;
+      font-size: 14px;
+      margin: 0;
+      border-radius: 300px;
+      transition: .1s opacity linear; }
   .site footer #st {
     width: 100%;
     height: 111px;

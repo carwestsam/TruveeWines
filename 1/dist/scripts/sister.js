@@ -21,7 +21,7 @@ var truveeApp = angular.module('truveeApp', ['ui.bootstrap', 'ngSanitize', 'duSc
 truveeApp
 .controller( 'globalEnv', ['$scope', '$window', '$document', function( $scope, $window, $document){
 	$scope.Env = {}
-	$scope.Env.pageIds = ['page_welcome', 'page_sister', 'page_wineyard', 'page_redblend'];
+	$scope.Env.pageIds = ['page_welcome', 'page_sister', 'page_wineyard', 'page_redblend','page_social', 'page_locator', 'page_contactus', ];
 	$scope.Env.pageHeights = []
 	for ( ids in $scope.Env.pageIds ){
 		var t = $scope.Env.pageIds[ids];
@@ -99,18 +99,30 @@ truveeApp
 			$scope.Env.pageHeights[t] =  document.getElementById(t).getBoundingClientRect().top ;
 			$scope.globalNav.selectedNav = last;
 			last = t;
-			if ( elePosition - $scope.globalNav.navHeight > 0 ){
+			if ( elePosition - $scope.globalNav.navHeight < -1 ){
+				continue;
+			}
+			else if ( elePosition - $scope.globalNav.navHeight > 1 ){
+				flag= true; break;
+			}else {
+				$scope.globalNav.selectedNav = t;
 				flag = true;break;
-			}else if ( elePosition - $scope.globalNav.navHeight == 0 ){
+			}
+/*
+			if ( elePosition - $scope.globalNav.navHeight > 0 ){
+
+				flag = true;break;
+			}else if ( elePosition - $scope.globalNav.navHeight > -1 ){
 				$scope.globalNav.selectedNav = t;
 				console.log(t,elePosition, $scope.globalNav.navHeight);
     			console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
     			flag = true;
 				break;
-			}
+			}*/
 		}
 		if (flag == false){
-		$scope.globalNav.selectedNav = last;}
+			$scope.globalNav.selectedNav = last;
+		}
 		$scope.$apply();
 		console.log($scope.Env.pageHeights, $scope.globalNav.navHeight);
     	console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
