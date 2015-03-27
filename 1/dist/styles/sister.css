@@ -94,52 +94,83 @@ section.main {
     padding-right: 37.5px;
     padding-top: 7.5px; }
 
-.global-nav-wrapper {
-  /*
-  	.global-nav.ng-hide-add, .global-nav.ng-hide-remove {
-  	  -webkit-transition:all linear 0.5s;
-  	  -moz-transition:all linear 0.5s;
-  	  -o-transition:all linear 0.5s;
-  	  transition:all linear 0.5s;
-  	  display:block!important;
-  	}
-  
-  	.global-nav.ng-hide-add.ng-hide-add-active,
-  	.global-nav.ng-hide-remove {
-  	  opacity:0;
-  	}
-  
-  	.global-nav.ng-hide-add,
-  	.global-nav.ng-hide-remove.ng-hide-remove-active {
-  	  opacity:1;
-  	}
-  
-  */ }
-  .global-nav-wrapper .global-nav {
-    position: fixed;
-    width: 100%;
-    height: auto;
-    border-top: 1.5em;
-    font-size: 15px;
-    line-height: 2em;
-    background-color: black;
+.mobile-nav-wrapper {
+  width: 100%;
+  height: 100%; }
+  @media screen and (min-width: 970px) {
+    .mobile-nav-wrapper {
+      display: none; } }
+  .mobile-nav-wrapper .nav-icon {
+    line-height: 1.4;
+    margin-left: 1.5em;
+    margin-top: 1.5em;
+    font-size: 1.5em;
+    display: block;
     color: white;
-    font-family: "RalewaySemiBold";
-    z-index: 1024;
+    z-index: 2048;
+    position: fixed;
+    text-shadow: 0px 0px 4px rgba(58, 58, 58, 0.34); }
+  .mobile-nav-wrapper .mobile-nav-content-wrapper {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(28, 21, 19, 0.97);
+    z-index: 512;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    overflow: hidden; }
-    .global-nav-wrapper .global-nav .global-nav-item {
-      display: block;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: 1em;
-      letter-spacing: 0.1em; }
-    .global-nav-wrapper .global-nav .global-nav-item.active {
-      color: #38ffd7; }
+    align-items: center; }
+    .mobile-nav-wrapper .mobile-nav-content-wrapper .mobile-nav {
+      position: relative;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 2px;
+      line-height: 1em;
+      font-family: "RalewaySemiBold";
+      color: white;
+      z-index: 1024; }
+      .mobile-nav-wrapper .mobile-nav-content-wrapper .mobile-nav a:link,
+      .mobile-nav-wrapper .mobile-nav-content-wrapper .mobile-nav a:visited {
+        color: white;
+        text-decoration: none; }
+      .mobile-nav-wrapper .mobile-nav-content-wrapper .mobile-nav .global-nav-item {
+        padding: .5em 0; }
+      .mobile-nav-wrapper .mobile-nav-content-wrapper .mobile-nav .global-nav-item:hover,
+      .mobile-nav-wrapper .mobile-nav-content-wrapper .mobile-nav .global-nav-item.active {
+        color: #38ffd7; }
+
+.global-nav-wrapper .global-nav {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  border-top: 1.5em;
+  font-size: 15px;
+  line-height: 2em;
+  background-color: black;
+  color: white;
+  font-family: "RalewaySemiBold";
+  z-index: 512;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden; }
+  @media screen and (max-width: 970px) {
+    .global-nav-wrapper .global-nav {
+      display: none; } }
+  .global-nav-wrapper .global-nav a:link,
+  .global-nav-wrapper .global-nav a:visited {
+    color: white;
+    text-decoration: none; }
+  .global-nav-wrapper .global-nav .global-nav-item {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    letter-spacing: 0.1em; }
+  .global-nav-wrapper .global-nav .global-nav-item.active {
+    color: #38ffd7; }
 
 .site {
   font-family: "Raleway";
@@ -150,11 +181,15 @@ section.main {
   font-style: normal;
   color: rgba(28, 28, 28, 0.9); }
   .site .page {
-    min-height: 768px; }
+    overflow: hidden; }
     .site .page .indexLogoMedium {
       margin-top: 30px;
       width: 100%;
       height: auto; }
+      @media screen and (max-width: 750px) {
+        .site .page .indexLogoMedium {
+          position: absolute;
+          width: 100%; } }
       .site .page .indexLogoMedium img {
         width: 200px;
         max-width: 200px;
@@ -164,6 +199,14 @@ section.main {
         @media screen and (min-width: 1220px) {
           .site .page .indexLogoMedium img {
             display: none; } }
+        @media screen and (max-width: 750px) {
+          .site .page .indexLogoMedium img {
+            width: auto;
+            height: 4em;
+            z-index: 1025;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto; } }
     .site .page .headerNav {
       margin-top: 30px;
       display: flex;
@@ -171,6 +214,15 @@ section.main {
       justify-content: center;
       flex-wrap: wrap;
       align-items: center; }
+      @media screen and (max-width: 970px) {
+        .site .page .headerNav {
+          display: none; } }
+      .site .page .headerNav a:link,
+      .site .page .headerNav a:visited {
+        color: white;
+        text-decoration: none; }
+      .site .page .headerNav a:active {
+        color: #38FFD7; }
       .site .page .headerNav .index {
         margin-left: 1em;
         white-space: nowrap;
@@ -178,7 +230,8 @@ section.main {
         color: white;
         font-size: 15px; }
       .site .page .headerNav .index:hover {
-        color: #38FFD7; }
+        color: #38FFD7;
+        cursor: pointer; }
       .site .page .headerNav .indexLogoLarge {
         margin-left: 1em; }
         .site .page .headerNav .indexLogoLarge img {
@@ -188,14 +241,21 @@ section.main {
           @media screen and (max-width: 1220px) {
             .site .page .headerNav .indexLogoLarge img {
               display: none; } }
-    .site .page #welcome-background {
+  .site .page .welcome-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%; }
+    .site .page .welcome-wrapper .welcome-background {
       position: absolute;
       background-image: url("/images/WelcomePage.png");
       background-size: cover;
       width: 100%;
       height: 100%;
       z-index: -1; }
-      .site .page #welcome-background .background-cover {
+      @media screen and (max-width: 750px) {
+        .site .page .welcome-wrapper .welcome-background {
+          background: url("/images/WelcomePage.png") no-repeat center center scroll; } }
+      .site .page .welcome-wrapper .welcome-background .background-cover {
         position: absolute;
         background-color: rgba(32, 23, 19, 0.7);
         width: 100%;
@@ -291,18 +351,23 @@ section.main {
     align-items: center;
     position: absolute;
     width: 100%;
+    height: 50%;
     margin: auto;
     top: 50%; }
     @media screen and (max-width: 775px) {
       .site .welcome-content {
         top: 40%; } }
     .site .welcome-content .title {
+      text-align: center;
       font-family: "RalewayExtraLight";
       font-size: 82px;
       font-weight: 200;
       font-style: normal;
       text-rendering: optimizelegibility;
       cursor: auto; }
+      @media screen and (max-width: 750px) {
+        .site .welcome-content .title {
+          font-size: 36px; } }
     .site .welcome-content .desc {
       font-family: "RalewaySemiBold";
       font-size: 18px;
@@ -310,8 +375,7 @@ section.main {
       color: #38FFD7; }
       @media screen and (max-width: 775px) {
         .site .welcome-content .desc {
-          position: absolute;
-          left: 1em; } }
+          text-align: center; } }
   .site .page .watchOurStory-section {
     position: relative;
     width: 100%;
@@ -342,7 +406,8 @@ section.main {
     background: url(../images/TruvvechardbootleCU.jpg) no-repeat 50% 50% fixed;
     font-family: "Raleway-Thin";
     background-size: cover;
-    background-attachment: scroll; }
+    background-attachment: scroll;
+    overflow: hidden; }
     .site .page .locator-wrapper .float {
       background-color: rgba(0, 0, 0, 0.6); }
     .site .page .locator-wrapper h1 {
@@ -441,6 +506,10 @@ section.main {
       flex-wrap: wrap;
       align-items: center;
       margin-top: 7%; }
+      .site footer #nd #info #navi a:link,
+      .site footer #nd #info #navi a:visited {
+        color: white;
+        text-decoration: none; }
       .site footer #nd #info #navi div {
         margin-left: 1.5em;
         letter-spacing: 2px;
@@ -479,7 +548,8 @@ section.main {
   #welcomePage #headerNav .mainNavigation {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; }
+    justify-content: space-between;
+    cursor: pointer; }
     #welcomePage #headerNav .mainNavigation .index {
       color: white;
       font-size: 17px; }

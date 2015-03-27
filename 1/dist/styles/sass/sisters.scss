@@ -118,11 +118,83 @@ $active-color: #38FFD7;
 		padding-top: 7.5px;
 	}
 }
+.mobile-nav-wrapper{
+	//position: fixed;
+	width:100%;
+	height: 100%;
+	//overflow: hidden;
 
+
+	@media screen and (min-width: $width-medium) {
+		display : none;
+    }
+    .nav-icon{
+    	line-height: 1.4;
+	    margin-left: 1.5em;
+	    margin-top: 1.5em;
+	    font-size: 1.5em;
+	    display: block;
+	    color: white;
+	    z-index: 2048;
+	    position: fixed;
+	    text-shadow: 0px 0px 4px rgba(58, 58, 58, 0.34);
+    }
+
+    .mobile-nav-content-wrapper{
+
+    	position: fixed;
+    	height: 100%;
+    	width: 100%;
+    	background-color: rgba(28,21,19,.97);
+    	z-index: 512;
+
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: center;
+    	align-items: center;
+    	
+
+    	.mobile-nav{
+    		
+
+    		position: relative;
+
+    		text-align: center;
+
+    		font-size: 24px;
+    		letter-spacing: 2px;
+
+    		line-height: 1em;
+	    	font-family: "RalewaySemiBold";
+	    	color: white;
+	    	
+	    	
+	    	z-index: 1024;
+
+		    a:link,
+			a:visited{
+				color: white;
+				text-decoration: none;
+			}
+	    	.global-nav-item{
+	    		padding: .5em 0;
+	    	}
+	    	.global-nav-item:hover,
+	    	.global-nav-item.active{
+	    		color: rgb(56, 255, 215);
+	    	}
+    	}    	
+    }
+}
 
 .global-nav-wrapper{
 
 	.global-nav{
+
+		@media screen and (max-width: $width-medium) {
+			display: none;
+    	}
+
 		position: fixed;
 		width: 100%;
 		height: auto;
@@ -137,7 +209,7 @@ $active-color: #38FFD7;
 		color : white;
 		font-family: "RalewaySemiBold";
 
-		z-index: 1024;
+		z-index: 512;
 
 		display: flex;
 		flex-direction: row;
@@ -147,6 +219,11 @@ $active-color: #38FFD7;
 
 		overflow: hidden;
 
+		a:link,
+		a:visited{
+			color: white;
+			text-decoration: none;
+		}
 		.global-nav-item{
 			display: block;
 			margin-top: 0.5em;
@@ -158,27 +235,6 @@ $active-color: #38FFD7;
 			color: rgb(56, 255, 215);
 		}
 	}
-
-/*
-	.global-nav.ng-hide-add, .global-nav.ng-hide-remove {
-	  -webkit-transition:all linear 0.5s;
-	  -moz-transition:all linear 0.5s;
-	  -o-transition:all linear 0.5s;
-	  transition:all linear 0.5s;
-	  display:block!important;
-	}
-
-	.global-nav.ng-hide-add.ng-hide-add-active,
-	.global-nav.ng-hide-remove {
-	  opacity:0;
-	}
-
-	.global-nav.ng-hide-add,
-	.global-nav.ng-hide-remove.ng-hide-remove-active {
-	  opacity:1;
-	}
-
-*/
 }
 
 .site{
@@ -191,14 +247,20 @@ $active-color: #38FFD7;
 	color: rgba(28, 28, 28, 0.9);
 
 	.page{
+		overflow: hidden;
 		//background-color: lightblue;
-		min-height: 768px;
+		//min-height: 720px;
 
 		.indexLogoMedium{
 			
 			margin-top: 30px;
 			width: 100%;
 			height : auto;
+			@media screen and (max-width: $width-small){
+				position: absolute;
+				width: 100%;
+
+			}
 			img {
 				width: 200px;
 				max-width: 200px;
@@ -208,15 +270,34 @@ $active-color: #38FFD7;
 				@media screen and (min-width: $width-large+50) {
 					display: none;
 				}
+				@media screen and (max-width: $width-small){
+					width: auto;
+					height: 4em;
+					z-index: 1025;
+					position: relative;
+					margin-left: auto;
+					margin-right: auto;
+				}
 			}
 		}
 		.headerNav{
+			@media screen and (max-width: $width-medium) {
+				display: none;
+    		}
 			margin-top: 30px;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			flex-wrap: wrap;
 			align-items:center;
+			a:link,
+			a:visited{
+				color: white;
+				text-decoration: none;
+			}
+			a:active{
+				color: $active-color;
+			}
 			.index{
 				margin-left: 1em;
 				white-space: nowrap;
@@ -226,6 +307,7 @@ $active-color: #38FFD7;
 			}
 			.index:hover{
 				color: $active-color;
+				cursor: pointer;
 			}
 			.indexLogoLarge{
 				margin-left: 1em;
@@ -240,11 +322,19 @@ $active-color: #38FFD7;
 
 			}
 		}
-
-		#welcome-background{
+	}
+	.page .welcome-wrapper{
+		position: relative;
+		height: 100%;
+		width: 100%;
+		.welcome-background{
 			position: absolute;
 			background-image: url("/images/WelcomePage.png");
 			background-size: cover;
+			@media screen and (max-width: $width-small) {
+				background: url("/images/WelcomePage.png") no-repeat center center scroll;
+			}
+
 			width: 100%;
 			height: 100%;
 			z-index: -1;
@@ -256,6 +346,7 @@ $active-color: #38FFD7;
 			}
 		}
 	}
+
 
 	.page .sister-section{
 		.left-content{
@@ -379,15 +470,20 @@ $active-color: #38FFD7;
 		align-items: center;
 		position: absolute;
 		width: 100%;
-		//height: 100%;
+		height: 50%;
 
 		margin: auto;
 		top : 50%;
+
 		@media screen and (max-width: 775px){
 			top: 40%;
 		}
 
 		.title{
+			@media screen and (max-width: $width-small) {
+				font-size: 36px;
+    		}
+    		text-align: center;
 			font-family: "RalewayExtraLight";
 			font-size: 82px;
 			font-weight: 200;
@@ -401,8 +497,9 @@ $active-color: #38FFD7;
 			letter-spacing: 3px;
 			color: $active-color;
 			@media screen and (max-width: 775px){
-				position: absolute;
-				left: 1em;
+				//position: absolute;
+				//left: 1em;
+				text-align: center;
 			}
 		}
 
@@ -446,6 +543,7 @@ $active-color: #38FFD7;
         font-family: "Raleway-Thin";
         background-size: cover;
         background-attachment: scroll;
+        overflow: hidden;
 
 		.float{
         	background-color: rgba(0, 0, 0, 0.6);
@@ -487,9 +585,6 @@ $active-color: #38FFD7;
 
     }
     .page .contact-wrapper{
-
-
-
 		h1{
 			text-align: left;
 			font-family: "Raleway";
@@ -582,6 +677,11 @@ $active-color: #38FFD7;
 					align-items:center;
 					margin-top: 7%;
 
+					a:link,
+					a:visited{
+						color: white;
+						text-decoration: none;
+					}
 					
 					div{
 						margin-left: 1.5em;
@@ -637,6 +737,7 @@ $active-color: #38FFD7;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
+			cursor: pointer;
 			.index{
 				color: white;
 				font-size: 17px;
