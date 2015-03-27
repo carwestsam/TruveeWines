@@ -1,5 +1,5 @@
 $width-xsmall: 768px;
-$width-small: 750px;
+$width-small: 770px;
 $width-medium: 970px;
 $width-large: 1170px;
 $width-small-content: 498px; 
@@ -125,7 +125,7 @@ $active-color: #38FFD7;
 	//overflow: hidden;
 
 
-	@media screen and (min-width: $width-medium) {
+	@media screen and (min-width: $width-small) {
 		display : none;
     }
     .nav-icon{
@@ -138,6 +138,7 @@ $active-color: #38FFD7;
 	    z-index: 2048;
 	    position: fixed;
 	    text-shadow: 0px 0px 4px rgba(58, 58, 58, 0.34);
+	    cursor: pointer;
     }
 
     .mobile-nav-content-wrapper{
@@ -178,6 +179,7 @@ $active-color: #38FFD7;
 			}
 	    	.global-nav-item{
 	    		padding: .5em 0;
+	    		cursor: pointer;
 	    	}
 	    	.global-nav-item:hover,
 	    	.global-nav-item.active{
@@ -191,7 +193,7 @@ $active-color: #38FFD7;
 
 	.global-nav{
 
-		@media screen and (max-width: $width-medium) {
+		@media screen and (max-width: $width-small) {
 			display: none;
     	}
 
@@ -230,6 +232,7 @@ $active-color: #38FFD7;
 			margin-bottom: 0.5em;
 			margin-left: 1em;
 			letter-spacing: 0.1em;
+			cursor:pointer;
 		}
 		.global-nav-item.active{
 			color: rgb(56, 255, 215);
@@ -281,7 +284,7 @@ $active-color: #38FFD7;
 			}
 		}
 		.headerNav{
-			@media screen and (max-width: $width-medium) {
+			@media screen and (max-width: $width-small) {
 				display: none;
     		}
 			margin-top: 30px;
@@ -658,6 +661,7 @@ $active-color: #38FFD7;
     }
 
 	footer{
+
 		#st{
 			width: 100%;
 			height: 111px; 
@@ -666,11 +670,17 @@ $active-color: #38FFD7;
 		}
 		#nd{
 			width: 100%;
-			height: 287.5px;
+			//height: 287.5px;
 			background-color: rgba(28,21,19,.95);
+			//padding-bottom: 2em;
+			padding: 68px 34px;
 			#info{
 				#navi{
+
 					display: flex;
+					@media screen and (max-width: $width-small){
+						flex-direction: column;
+					}
 					flex-direction: row;
 					justify-content: center;
 					flex-wrap: wrap;
@@ -681,14 +691,18 @@ $active-color: #38FFD7;
 					a:visited{
 						color: white;
 						text-decoration: none;
+						cursor: pointer;
 					}
-					
 					div{
 						margin-left: 1.5em;
 						letter-spacing: 2px;
 						font-size: 12px;
 						display: inline;
 						color: white;
+						cursor: pointer;
+					}
+					div:hover{
+						color: rgba(255,255,255,.4);
 					}
 				};
 				#addr{

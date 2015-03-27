@@ -24,7 +24,7 @@ section.main {
     section.main {
       float: none;
       width: auto; } }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 770px) {
     section.main {
       font-size: 12px;
       line-height: 1.4; } }
@@ -97,7 +97,7 @@ section.main {
 .mobile-nav-wrapper {
   width: 100%;
   height: 100%; }
-  @media screen and (min-width: 970px) {
+  @media screen and (min-width: 770px) {
     .mobile-nav-wrapper {
       display: none; } }
   .mobile-nav-wrapper .nav-icon {
@@ -109,7 +109,8 @@ section.main {
     color: white;
     z-index: 2048;
     position: fixed;
-    text-shadow: 0px 0px 4px rgba(58, 58, 58, 0.34); }
+    text-shadow: 0px 0px 4px rgba(58, 58, 58, 0.34);
+    cursor: pointer; }
   .mobile-nav-wrapper .mobile-nav-content-wrapper {
     position: fixed;
     height: 100%;
@@ -134,7 +135,8 @@ section.main {
         color: white;
         text-decoration: none; }
       .mobile-nav-wrapper .mobile-nav-content-wrapper .mobile-nav .global-nav-item {
-        padding: .5em 0; }
+        padding: .5em 0;
+        cursor: pointer; }
       .mobile-nav-wrapper .mobile-nav-content-wrapper .mobile-nav .global-nav-item:hover,
       .mobile-nav-wrapper .mobile-nav-content-wrapper .mobile-nav .global-nav-item.active {
         color: #38ffd7; }
@@ -156,7 +158,7 @@ section.main {
   flex-wrap: wrap;
   align-items: center;
   overflow: hidden; }
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 770px) {
     .global-nav-wrapper .global-nav {
       display: none; } }
   .global-nav-wrapper .global-nav a:link,
@@ -168,7 +170,8 @@ section.main {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     margin-left: 1em;
-    letter-spacing: 0.1em; }
+    letter-spacing: 0.1em;
+    cursor: pointer; }
   .global-nav-wrapper .global-nav .global-nav-item.active {
     color: #38ffd7; }
 
@@ -186,7 +189,7 @@ section.main {
       margin-top: 30px;
       width: 100%;
       height: auto; }
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 770px) {
         .site .page .indexLogoMedium {
           position: absolute;
           width: 100%; } }
@@ -199,7 +202,7 @@ section.main {
         @media screen and (min-width: 1220px) {
           .site .page .indexLogoMedium img {
             display: none; } }
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 770px) {
           .site .page .indexLogoMedium img {
             width: auto;
             height: 4em;
@@ -214,7 +217,7 @@ section.main {
       justify-content: center;
       flex-wrap: wrap;
       align-items: center; }
-      @media screen and (max-width: 970px) {
+      @media screen and (max-width: 770px) {
         .site .page .headerNav {
           display: none; } }
       .site .page .headerNav a:link,
@@ -252,7 +255,7 @@ section.main {
       width: 100%;
       height: 100%;
       z-index: -1; }
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 770px) {
         .site .page .welcome-wrapper .welcome-background {
           background: url("/images/WelcomePage.png") no-repeat center center scroll; } }
       .site .page .welcome-wrapper .welcome-background .background-cover {
@@ -365,7 +368,7 @@ section.main {
       font-style: normal;
       text-rendering: optimizelegibility;
       cursor: auto; }
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 770px) {
         .site .welcome-content .title {
           font-size: 36px; } }
     .site .welcome-content .desc {
@@ -497,8 +500,8 @@ section.main {
     background-color: #332c29; }
   .site footer #nd {
     width: 100%;
-    height: 287.5px;
-    background-color: rgba(28, 21, 19, 0.95); }
+    background-color: rgba(28, 21, 19, 0.95);
+    padding: 68px 34px; }
     .site footer #nd #info #navi {
       display: flex;
       flex-direction: row;
@@ -506,16 +509,23 @@ section.main {
       flex-wrap: wrap;
       align-items: center;
       margin-top: 7%; }
+      @media screen and (max-width: 770px) {
+        .site footer #nd #info #navi {
+          flex-direction: column; } }
       .site footer #nd #info #navi a:link,
       .site footer #nd #info #navi a:visited {
         color: white;
-        text-decoration: none; }
+        text-decoration: none;
+        cursor: pointer; }
       .site footer #nd #info #navi div {
         margin-left: 1.5em;
         letter-spacing: 2px;
         font-size: 12px;
         display: inline;
-        color: white; }
+        color: white;
+        cursor: pointer; }
+      .site footer #nd #info #navi div:hover {
+        color: rgba(255, 255, 255, 0.4); }
     .site footer #nd #info #addr div {
       display: flex;
       color: rgba(255, 255, 255, 0.3);
