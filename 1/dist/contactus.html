@@ -16,21 +16,24 @@
         <!--
         -->
         <script src="scripts/single.js" type="text/javascript" charset="utf-8"></script>
+
+
         <link rel="stylesheet" type="text/css" href="styles/single.css">
         <link rel="stylesheet" type="text/css" href="styles/content.css">
+        <!--
         <link rel="stylesheet" type="text/css" href="styles/contactus.css">
+        -->
     </head>
-    <body>
+
     <body ng-app="singleApp" ng-controller = "globalEnv">
         <div class="header-wrapper" id="header-wrapper" ng-include="'templates/singleNav.html'">
         </div>
 
-        <div ng-include="'templates/contactus.html'">
+        <div  ng-include="'templates/contactus.html'">
         </div>
 
         <div class="footer-wrapper" id = "footer" ng-include="'templates/footer.html'">
         </div>
-    </body>
     </body>
 </html>
 
