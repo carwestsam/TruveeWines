@@ -7,14 +7,14 @@
             <div class="container">
                 <div class="navi">
                     <div ng-click="Env.scrollTo('header-wrapper')" class="backtop">BACK TO TOP</div>
-                    <div ng-href="#page_sister">SISTERS STORY</div>
-                    <div> <a href="/#page_sister">VINEYARDS</a></div>
-                    <div>WINE SHOP</div>
-                    <div>CONTACT US</div>
-                    <div>PRIVACY</div>
-                    <div>TERMS &amp; CONDITIONS</div>
-                    <div><a href="http://www.drinkiq.com" target="_blank">DRINKIQ</a></div>
-                    <div>ACCESSIBILITY</div>
+                    <div ng-click="Env.OpenNew('/##page_sister')">SISTERS STORY</div>
+                    <div ng-click="Env.OpenNew('/##page_wineyard')"> VINEYARDS</div>
+                    <div  ng-click="Env.OpenNew('/##page_redblend')">WINE SHOP</div>
+                    <div ng-click="Env.OpenNew('/##page_contactus')">CONTACT US</div>
+                    <div ng-click="Env.OpenNew('/privacy.html')">PRIVACY</div>
+                    <div ng-click="Env.OpenNew('/termsandconditions.html')">TERMS &amp; CONDITIONS</div>
+                    <div ng-click="Env.OpenNew('http://www.drinkiq.com')">DRINKIQ</div>
+                    <div ng-click="Env.OpenNew('/accessibility.html')">ACCESSIBILITY</div>
                 </div>
                 <br/>
                 <div class="addr">
