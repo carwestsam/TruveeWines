@@ -501,50 +501,74 @@
   .site footer #st {
     width: 100%;
     height: 111px;
-    background-color: #332c29; }
-  .site footer #nd {
+    background-color: #332c29;
+    padding-top: 10px; }
+    .site footer #st .snss {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .site footer #st .snss .sns-logo {
+        margin-left: 1em;
+        height: 32px;
+        width: 32px;
+        display: block;
+        transition: background-color 0.5s ease;
+        background-color: #332c29;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 2.5px;
+        border-color: white; }
+      .site footer #st .snss .sns-logo:hover {
+        background-color: white; }
+      .site footer #st .snss .sns-logo .icon {
+        fill: white; }
+      .site footer #st .snss .sns-logo:hover .icon {
+        fill: #332c29; }
+  .site footer .nd {
     width: 100%;
     background-color: rgba(28, 21, 19, 0.95);
     padding: 68px 34px; }
     @media screen and (max-width: 640px) {
-      .site footer #nd {
+      .site footer .nd {
         padding: 20px; } }
-    .site footer #nd #info .navi {
+    .site footer .nd .info .navi {
       display: flex;
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
-      align-items: center;
-      margin-top: 7%; }
+      align-items: center; }
       @media screen and (max-width: 770px) {
-        .site footer #nd #info .navi {
+        .site footer .nd .info .navi {
           flex-direction: column; } }
-      .site footer #nd #info .navi .backtop {
+      .site footer .nd .info .navi .backtop {
         display: none; }
         @media screen and (max-width: 770px) {
-          .site footer #nd #info .navi .backtop {
+          .site footer .nd .info .navi .backtop {
             display: block; } }
-      .site footer #nd #info .navi a:link,
-      .site footer #nd #info .navi a:visited {
+      .site footer .nd .info .navi a:link,
+      .site footer .nd .info .navi a:visited {
         color: white;
         text-decoration: none;
         cursor: pointer; }
-      .site footer #nd #info .navi div {
+      .site footer .nd .info .navi div {
         margin-left: 1.5em;
         letter-spacing: 2px;
         font-size: 12px;
         display: inline;
         color: white;
         cursor: pointer; }
-      .site footer #nd #info .navi div:hover {
+      .site footer .nd .info .navi div:hover {
         color: rgba(255, 255, 255, 0.4); }
-    .site footer #nd #info #addr div {
+    .site footer .nd .info .addr div {
       display: flex;
       color: rgba(255, 255, 255, 0.3);
       justify-content: center;
       text-align: center;
       line-height: 2em; }
-      .site footer #nd #info #addr div a {
+      .site footer .nd .info .addr div a {
         color: rgba(255, 255, 255, 0.3); }
   .site .welcome {
     background-color: pink; }

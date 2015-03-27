@@ -21,7 +21,7 @@ var truveeApp = angular.module('truveeApp', ['ui.bootstrap', 'ngSanitize', 'duSc
 truveeApp
 .controller( 'globalEnv', ['$scope', '$window', '$document', function( $scope, $window, $document){
 	$scope.Env = {}
-	$scope.Env.pageIds = ['page_welcome', 'page_sister', 'page_wineyard', 'page_redblend',/*'page_social', 'page_locator'*/, 'page_contactus', ];
+	$scope.Env.pageIds = ['page_welcome', 'page_sister', 'page_wineyard', 'page_redblend','page_social', /*'page_locator',*/ 'page_contactus', ];
 	$scope.Env.pageHeights = []
 	for ( ids in $scope.Env.pageIds ){
 		var t = $scope.Env.pageIds[ids];
