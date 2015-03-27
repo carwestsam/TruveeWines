@@ -41,7 +41,7 @@ truveeApp
     	var gnHeight = document.getElementById('global-nav').clientHeight;
     	console.log( gnHeight);
     	var ele = document.getElementById(eleId);
-    	$document.scrollToElement( ele, gnHeight, 1500 );
+    	$document.scrollToElement( ele, 0, 1500 );
     }
 
 	$scope.globalNav = {}
@@ -149,6 +149,6 @@ truveeApp
     	var gnHeight = document.getElementById('global-nav').clientHeight;
     	console.log( gnHeight);
     	var ele = document.getElementById(eleId);
-    	$document.scrollToElement( ele, gnHeight, 1500 );
+    	$document.scrollToElement( ele, 0, 1500 );
     }
 }]);
