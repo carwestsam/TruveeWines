@@ -12,58 +12,116 @@
         <script src="scripts/ui-bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/ui-bootstrap-tpls.min.js" type="text/javascript" charset="utf-8"></script>
 
-        
         <script src="//use.typekit.net/cyc1ssq.js"></script><script>try{Typekit.load();}catch(e){}</script>
-        
-        
-        
+    
         <script src="scripts/sister.js" type="text/javascript" charset="utf-8"></script>
         <link rel="stylesheet" type="text/css" href="styles/sister.css">
+
+
+<!--
+        <script>
+            age_gate_settings = {
+                default_fail_url: 'http://www.drinkiq.com',
+                default_lang: 'en',
+                default_country: 'US',
+                terms_url: '/terms-and-conditions/',
+                privacy_url: '/privacy-policy-and-cookie-notice/',
+                site_name: 'Truvee Wines',
+                style: {
+                    overlay_opacity: '80',
+                    logo: '/truveeLogo.png',
+                    background_color: '#6DD2CA',
+                    overlay_color: '#000',
+                    form_border: '1px solid #E1E1E1',
+                    site_color: '#606060',
+                    text_align: 'center',
+                    text_font: '25px sans-serif',
+                    text_color: '#606060',
+                    enter_button_bg: '#000',
+                    enter_button_border: '0px solid #1891D7',
+                    enter_button_font: 'sans-serif',
+                    enter_button_color: '#bbe0e6',
+                    enter_button_hover_bg: '#fff',
+                    enter_button_hover_color: '#bbe0e6',
+                    terms_color: '#fff',
+                    tagline_font: 'raleway',
+                    tagline_color: '#606060'
+                },
+                lang: {
+                    en: {
+                        label: 'English',
+                        override: {
+                            enter_site: 'In order to enter this site we need to know how old you are.',
+                            site_header: ''
+                        }
+                    }
+                },
+            };
+        </script>
+    <script src="//www.diageoagegate.com/production/agegate.min.js"></script>
+    <noscript>
+        <div id="nojs" style="position: fixed; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 100001; background-color: #fff;">
+            <img alt="Notification: Please enable JavaScript and reload this page. Truvee Wines requires all users to enter their date of birth and country for
+    verification of legal drinking age." width="800" height="280" src="http://www.diageoagegate.com/nojs-bg.png">
+        </div>
+    </noscript>
+-->
+
+
+
     </head>
     <body ng-app="truveeApp" ng-controller="globalEnv">
         <div class="global-nav-wrapper" >
-            <div class="global-nav" id="global-nav"  ng-controller="globalNav" collapse="globalNav.disp">
-                <div class="global-nav-item {{globalNav.selectedNav == 'page_welcome'? 'active' : ''}}" id="page_welcome_gnav" ng-click="globalNav.scrollTo('page_welcome')">WELCOME</div>
-                <div class="global-nav-item {{globalNav.selectedNav == 'page_sister'? 'active' : ''}}" id="page_sister_gnav" ng-click="globalNav.scrollTo('page_sister')">SISTER STORY</div>
-                <div class="global-nav-item {{globalNav.selectedNav == 'page_wineyard'? 'active' : ''}}" id="page_wineyard_gnav" ng-click="globalNav.scrollTo('page_wineyard')">VINEYARDS</div>
-                <div class="global-nav-item {{globalNav.selectedNav == 'page_redblend'? 'active' : ''}}" id="page_redblend_gnav" ng-click="globalNav.scrollTo('page_redblend')">WINE SHOP</div>
-                <div class="global-nav-item {{globalNav.selectedNav == 'page_social'? 'active' : ''}}" ng-click="globalNav.scrollTo('page_social')">SOCIAL</div>
-                <div class="global-nav-item  {{globalNav.selectedNav == 'page_locator'? 'active' : ''}}" ng-click="globalNav.scrollTo('page_locator')">STORE LOCATION</div>
-                <div class="global-nav-item {{globalNav.selectedNav == 'page_contactus'? 'active' : ''}}" ng-click="globalNav.scrollTo('page_contactus')">CONTACT US</div>
-                <div class="global-nav-item">PRESS RELEASE</div>
+            <div class="global-nav" id="global-nav"  ng-controller="globalNav" ng-include="'templates/globalNav.html'" collapse="globalNav.disp">
             </div>
         </div>
-        <div class="site"  ng-controller="mainPage">
-            <div class="page" id="page_welcome" ng-style="{{mainStyleHeight}}"  >
-                <div id="welcome-background"><div class="background-cover"></div>
-                </div>
-                <div class="container">
-                    <div class="indexLogoMedium"> <img src="/images/TRUVEE_title.png" alt=""> </div>
-                    <div class="headerNav">
+        
+        <div class="mobile-nav-wrapper" ng-controller="mobileNav">
+            
+            <span class="glyphicon glyphicon glyphicon-menu-hamburger nav-icon" ng-click="MobileNav.disp = !MobileNav.disp" ng-hide="MobileNav.disp" ></span>
+            <span class="glyphicon glyphicon-remove nav-icon" ng-show="MobileNav.disp" ng-click="MobileNav.disp = !MobileNav.disp"></span>
+            <div class="mobile-nav-content-wrapper" ng-show="MobileNav.disp">
+                <div class="mobile-nav"  >
+                    
+                    <div class="global-nav-item {{globalNav.selectedNav == 'page_welcome'? 'active' : ''}}" id="page_welcome_gnav" ng-click="MobileNav.scrollTo('page_welcome')"><a>WELCOME</a></div>
+                    <div class="global-nav-item {{globalNav.selectedNav == 'page_sister'? 'active' : ''}}" id="page_sister_gnav" ng-click="MobileNav.scrollTo('page_sister')">SISTERS STORY</div>
+                    <div class="global-nav-item {{globalNav.selectedNav == 'page_wineyard'? 'active' : ''}}" id="page_wineyard_gnav" ng-click="MobileNav.scrollTo('page_wineyard')">VINEYARDS</div>
+                    <div class="global-nav-item {{globalNav.selectedNav == 'page_redblend'? 'active' : ''}}" id="page_redblend_gnav" ng-click="MobileNav.scrollTo('page_redblend')">WINE SHOP</div>
+                    <div class="global-nav-item {{globalNav.selectedNav == 'page_social'? 'active' : ''}}" ng-click="MobileNav.scrollTo('page_social')">SOCIAL</div>
+                    <div class="global-nav-item  {{globalNav.selectedNav == 'page_locator'? 'active' : ''}}" ng-click="MobileNav.scrollTo('page_locator')"> <a href="http://www.thewinebar.com/find-local-retailer" target="_blank">STORE LOCATOR</a></div>
+                    <div class="global-nav-item {{globalNav.selectedNav == 'page_contactus'? 'active' : ''}}" ng-click="MobileNav.scrollTo('page_contactus')">CONTACT US</div>
+                    <div class="global-nav-item">PRESS RELEASE</div>
 
-                        <div class="index" ng-click="Env.scrollTo('page_welcome')">WELCOME</div>
-                        <div class="index" ng-click="Env.scrollTo('page_sister')">SISTERS STORY</div>
-                        <div class="index" ng-click="Env.scrollTo('page_wineyard')">VINEYARDS</div>
-                        <div class="index" ng-click="Env.scrollTo('page_redblend')">WINE SHOP</div>
-                        <div class="indexLogoLarge"> <img src="/images/TRUVEE_title.png" alt=""> </div>
-                        <div class="index" ng-click="Env.scrollTo('page_social')">SOCIAL</div>
-                        <div class="index" ng-click="Env.scrollTo('page_locator')">STORE LOCATOR</div>
-                        <div class="index" ng-click="Env.scrollTo('page_contactus')">CONTACT US</div>
-                        <div class="index">PRESS RELEASE</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site"  ng-controller="mainPage">
+            <div class="page">
+                <div class="welcome-wrapper">
+                    <div class="page" id="page_welcome" ng-style="{{mainStyleHeight}}"  >
+                        <div class="welcome-background"><div class="background-cover"></div>
+                        </div>
+                        <div class="container">
+                            <div class="indexLogoMedium"> <img src="/images/TRUVEE_title.png" alt=""> </div>
+                            <div class="headerNav" ng-include="'templates/headerNav.html'">
+
+                            </div>
+                        </div>
+
+                        <div class="welcome-content">
+                            <h1 class="title">
+                                Central Coast Wines
+                            </h1>
+                            <h3 class="desc">
+                                CREATED BY THE MCBRIDE SISTERS
+                            </h3>
+                        </div>
                     </div>
                 </div>
-
-                <div class="welcome-content">
-                    <h1 class="title">
-                        Central Coast Wines
-                    </h1>
-                    <h3 class="desc">
-                        CREATED BY THE MCBRIDE SISTERS
-                    </h3>
-                </div>
-
             </div>
             <div class="page " id="page_sister">
+                
                 <div class=" sister-section">
                     <div class="container index-section-wrapper">
                         <div class="row">
@@ -79,7 +137,7 @@
                                         Our father’s final wish was "to find" and connect his two daughters, and with the help of his family and despite the 7,000 miles that separated us, we were united for the first time in 1999 at the ages of 16 and 25. After connecting, we formed a deep and lasting friendship, and also discovered our mutual interest in the art of grape growing and winemaking.
                                     </p>
                                     <p>
-                                        Marrying 10 plus years of experience in the wine industry as négociants, and creators of eco.love Wines from New Zealand, we have crafted another authentic, but affordable luxury wine, this time from select vineyards within the Central Coast of California. Our vision for Truvée is to make delicious wines everyone can enjoy and inspire people "to find" what matters most to them.
+                                        Marrying 10 plus years of experience in the wine industry as négociants, and <a href="http://www.ecolovewines.com/" target="_blank">creators of eco.love Wines from New Zealand</a>, we have crafted another authentic, but affordable luxury wine, this time from select vineyards within the Central Coast of California. Our vision for Truvée is to make delicious wines everyone can enjoy and inspire people "to find" what matters most to them.
                                     </p>
                                     <p>
                                         Cheers!
@@ -110,7 +168,10 @@
             </div>
             <div class="page" id="page_watchstory" ng-controller="mcbrideCtrl"   >
                 <div class="watchOurStory-section" ng-style="{{mainStyleHeight}}">
+                    
                     <img src="/images/watchOurStory.jpg" alt="" class="video-background" ng-style="{{mainStyleHeight}}" />
+                    
+                    <!-- <div class="storybackground"></div> -->
                     <div class="content-video" ng-bind-html="mcbride.trustDangriousSnippet()"></div>
                     <div class="playicon" ng-show="mcbride.videoPlayIconDisplay" ng-click="mcbride.clickFunc()"></div>
                 </div>
@@ -236,9 +297,11 @@
                     </div>
                 </div>
             </div>
+           
             <div class="page" id="page_social">
-                <script type="text/javascript" class="rebelmouse-embed-script" src="https://www.rebelmouse.com/static/js-build/embed/embed.js?site=McBrideSisters&height=1500&flexible=1&dont_load_new_posts=0&more_button=0&show_rebelnav=1"></script>
+                <script type="text/javascript" class="rebelmouse-embed-script" src="https://www.rebelmouse.com/static/js-build/embed/embed.js?site=McBrideSisters&height=1500&flexible=1&dont_load_new_posts=1&more_button=1&show_rebelnav=1"></script>
             </div>
+            <!--
             <div class="page" id="page_locator">
                 <div class="locator-wrapper">
                     <div class="float">
@@ -258,6 +321,7 @@
                     </div>
                 </div>
             </div>
+            -->
 
             <div class="page" id="page_contactus">
                 <div class="container index-section-wrapper">
@@ -309,19 +373,19 @@
                     <div id="info">
                         <div class="container">
                             <div id="navi">
-                                <div>SISTERS STORY</div>
+                                <div ng-click="Env.scrollTo('page_sister')">SISTERS STORY</a></div>
                                 <div>VINEYARDS</div>
                                 <div>WINE SHOP</div>
                                 <div>CONTACT US</div>
                                 <div>PRIVACY</div>
                                 <div>TERMS &amp; CONDITIONS</div>
-                                <div>DRINKIQ</div>
+                                <div><a href="http://www.drinkiq.com" target="_blank">DRINKIQ<a></div>
                                 <div>ACCESSIBILITY</div>
                             </div>
                             <br/>
                             <div id="addr">
-                                <div>PLEASE ENJOY OUR WINES RESPONSIBLY</div><br/>
-                                <div>©2015 TRUVÉE WINES, SONOMA, CA</div><br/>
+                                <div>PLEASE ENJOY OUR WINES RESPONSIBLY</div>
+                                <div>©2015 TRUVÉE WINES, SONOMA, CA</div>
                                 <div><a href="http://www.mcbridesisters.com/">MCBRIDESISTERS WEBSITE</a></div>
                             </div>
                         </div>
