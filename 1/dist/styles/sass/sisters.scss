@@ -47,6 +47,9 @@ section.main {
 }
 $active-color: #38FFD7;
 
+.container{
+	max-width: 1080px;
+}
 .index-section-wrapper{
 	max-width: 1080px;
 	padding: 100px 34px;
@@ -97,6 +100,9 @@ $active-color: #38FFD7;
 	}
 	p {
 		font-size: 15px;
+		line-height: 1.6em;
+		letter-spacing: 0.4px;
+		font-weight: 500;
 	}
 	blockquote{
 		border-left-color: #1C1C1C;
@@ -117,6 +123,12 @@ $active-color: #38FFD7;
 		padding-right: 37.5px;
 		padding-top: 7.5px;
 	}
+	a:link,
+	a:visited{
+		color: $active-color;
+		text-decoration: none;
+	}
+
 }
 .mobile-nav-wrapper{
 	//position: fixed;
@@ -236,6 +248,9 @@ $active-color: #38FFD7;
 		}
 		.global-nav-item.active{
 			color: rgb(56, 255, 215);
+		}
+		.global-nav-item:hover{
+			color: $active-color;
 		}
 	}
 }
@@ -456,14 +471,26 @@ $active-color: #38FFD7;
 		}
 	}
 	.page .ChardonaryRedBlend{
+		h3{
+			margin: 1.5em auto 0.3em;
+		}
+		p {
+			margin-top: 1.5em;
+		}
 		.content{
 			@media screen and (max-width: $width-xsmall) {
 				display: block;
 				margin-top: 2em;
 				margin-left: auto;
 				margin-right: auto;
+				font-weight: 500;
+				font-style: normal;
 				max-width: $width-small-content;			
 			}
+			@media screen and (min-width: $width-small){
+				width: 83.3333%;
+			}
+			
 		}
 	}
 	.welcome-content{
