@@ -1,1 +1,5 @@
 .DS_Store
+./1/dist/.sass-cache
+./1/dist/.sass-cache/*
+*.scssc
+
