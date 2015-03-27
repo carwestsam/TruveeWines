@@ -90,7 +90,7 @@
                     <div class="global-nav-item {{globalNav.selectedNav == 'page_social'? 'active' : ''}}" ng-click="MobileNav.scrollTo('page_social')">SOCIAL</div>
                     <div class="global-nav-item  {{globalNav.selectedNav == 'page_locator'? 'active' : ''}}" ng-click="MobileNav.scrollTo('page_locator')"> <a href="http://www.thewinebar.com/find-local-retailer" target="_blank">STORE LOCATOR</a></div>
                     <div class="global-nav-item {{globalNav.selectedNav == 'page_contactus'? 'active' : ''}}" ng-click="MobileNav.scrollTo('page_contactus')" >CONTACT US</div>
-                    <div class="global-nav-item">PRESS RELEASE</div>
+                    <div class="global-nav-item" ng-click="Env.OpenNew('/press.html')">PRESS RELEASE</div>
                 </div>
             </div>
         </div>
