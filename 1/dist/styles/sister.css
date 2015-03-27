@@ -13,25 +13,6 @@
   font-style: normal;
   font-weight: 600;
   src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12bxsxEYwM7FgeyaSgU71cLG0.woff") format("woff"); }
-section.main {
-  font-size: 16px;
-  line-height: 1.4; }
-  @media screen and (max-width: 1170px) {
-    section.main {
-      float: left;
-      width: 65%; } }
-  @media screen and (max-width: 970px) {
-    section.main {
-      float: none;
-      width: auto; } }
-  @media screen and (max-width: 770px) {
-    section.main {
-      font-size: 12px;
-      line-height: 1.4; } }
-
-.container {
-  max-width: 1080px; }
-
 .index-section-wrapper {
   max-width: 1080px;
   padding: 100px 34px;
@@ -425,6 +406,8 @@ section.main {
     width: 100%;
     height: auto;
     overflow: hidden; }
+    .site .page .gallery .carousel-indicators li {
+      margin-left: 1em; }
   .site .page .locator-wrapper {
     margin: 0;
     background: url(../images/TruvvechardbootleCU.jpg) no-repeat 50% 50% fixed;

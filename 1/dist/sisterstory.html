@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Sisters Story — Truvée Wines</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+        <script src="scripts/angular.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/angular-sanitize.min.js" type="text/javascript" charse="utf-8"></script>
+        <script src="scripts/angular-scroll.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/angular-animate.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/ui-bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/ui-bootstrap-tpls.min.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="//use.typekit.net/cyc1ssq.js"></script><script>try{Typekit.load();}catch(e){}</script>
+        <!--
+        -->
+        <script src="scripts/single.js" type="text/javascript" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="styles/single.css">
+        <link rel="stylesheet" type="text/css" href="styles/content.css">
+    </head>
+    <body>
+    <body ng-app="singleApp" ng-controller = "globalEnv">
+        <div class="header-wrapper" id="header-wrapper" ng-include="'templates/singleNav.html'">
+
+        </div>
+
+        <div ng-include="'templates/sister_story.html'">
+        </div>
+
+        <div class="footer-wrapper" id = "footer" ng-include="'templates/footer.html'">
+        </div>
+    </body>
+    </body>
+</html>
+

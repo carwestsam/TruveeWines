@@ -89,9 +89,8 @@
                     <div class="global-nav-item {{globalNav.selectedNav == 'page_redblend'? 'active' : ''}}" id="page_redblend_gnav" ng-click="MobileNav.scrollTo('page_redblend')">WINE SHOP</div>
                     <div class="global-nav-item {{globalNav.selectedNav == 'page_social'? 'active' : ''}}" ng-click="MobileNav.scrollTo('page_social')">SOCIAL</div>
                     <div class="global-nav-item  {{globalNav.selectedNav == 'page_locator'? 'active' : ''}}" ng-click="MobileNav.scrollTo('page_locator')"> <a href="http://www.thewinebar.com/find-local-retailer" target="_blank">STORE LOCATOR</a></div>
-                    <div class="global-nav-item {{globalNav.selectedNav == 'page_contactus'? 'active' : ''}}" ng-click="MobileNav.scrollTo('page_contactus')">CONTACT US</div>
+                    <div class="global-nav-item {{globalNav.selectedNav == 'page_contactus'? 'active' : ''}}" ng-click="MobileNav.scrollTo('page_contactus')" >CONTACT US</div>
                     <div class="global-nav-item">PRESS RELEASE</div>
-
                 </div>
             </div>
         </div>
@@ -120,9 +119,9 @@
                     </div>
                 </div>
             </div>
-            <div class="page " id="page_sister">
+            <div class="page " id="page_sister" name="page_sister">
                 
-                <div class=" sister-section">
+                <div class="sister-section">
                     <div class="container index-section-wrapper">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
@@ -232,9 +231,9 @@
                 <div class="gallery">
                    <div ng-controller="CarouselCtrl" style="height:{{Main.pageHeight}}">
                         <div>
-                            <carousel interval="intervel" >
+                            <carousel interval="myInterval" >
                                 <slide ng-repeat="slide in slides" active="slide.active" >
-                                    <img src="{{ slide.image }}" style="width:100%;" >
+                                    <img ng-src="{{ slide.image }}" style="width:100%;" >
                                 </slide>
                             </carousel>
                         </div>
@@ -242,7 +241,7 @@
                 </div>
             </div>
             <div class="page " id="page_redblend">
-                <div class="index-section-wrapper ChardonaryRedBlend">
+                <div class="index-section-wrapper ChardonaryRedBlend wineshop-section">
                     <div class="row">
                         <h1>WINE SHOP</h1>
                         <img src="/images/2013ChardonnayRedBlend.png" alt="" class="col-xs-12">
@@ -377,7 +376,7 @@
                             <div class="navi">
                                 <div ng-click="Env.scrollTo('page_welcome')" class="backtop">BACK TO TOP</div>
                                 <div ng-click="Env.scrollTo('page_sister')">SISTERS STORY</a></div>
-                                <div>VINEYARDS</div>
+                                <div> <a href="/#page_sister">VINEYARDS</a></div>
                                 <div>WINE SHOP</div>
                                 <div>CONTACT US</div>
                                 <div>PRIVACY</div>
