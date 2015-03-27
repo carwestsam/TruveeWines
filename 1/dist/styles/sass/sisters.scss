@@ -1,4 +1,4 @@
-$width-xsmall: 768px;
+$width-xsmall: 640px;
 $width-small: 770px;
 $width-medium: 970px;
 $width-large: 1170px;
@@ -674,8 +674,11 @@ $active-color: #38FFD7;
 			background-color: rgba(28,21,19,.95);
 			//padding-bottom: 2em;
 			padding: 68px 34px;
+			@media screen and (max-width: $width-xsmall){
+				padding: 20px;
+			}
 			#info{
-				#navi{
+				.navi{
 
 					display: flex;
 					@media screen and (max-width: $width-small){
@@ -686,6 +689,13 @@ $active-color: #38FFD7;
 					flex-wrap: wrap;
 					align-items:center;
 					margin-top: 7%;
+
+					.backtop{
+						display : none;
+						@media screen and ( max-width: $width-small ){
+							display: block;
+						}
+					}
 
 					a:link,
 					a:visited{
@@ -710,6 +720,8 @@ $active-color: #38FFD7;
 						display: flex;
 						color: rgba(255,255,255,.3);
 						justify-content: center;
+						text-align: center;
+						line-height: 2em;
 						a{
 							color: rgba(255,255,255,.3);
 						}
