@@ -1,0 +1,377 @@
+$width-xsmall: 640px;
+$width-small: 770px;
+$width-medium: 970px;
+$width-large: 1170px;
+$width-small-content: 498px; 
+
+$fontSize: 16px;
+$active-color: #38FFD7;
+
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Raleway Medium"), local("Raleway-Medium"), url("https://fonts.gstatic.com/s/raleway/v9/CcKI4k9un7TZVWzRVT-T8_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/CcKI4k9un7TZVWzRVT-T8xsxEYwM7FgeyaSgU71cLG0.woff") format("woff");
+}
+
+@font-face {
+  font-family: "RalewayExtraLight";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Raleway ExtraLight"), local("Raleway-ExtraLight"), url("https://fonts.gstatic.com/s/raleway/v9/8KhZd3VQBtXTAznvKjw-k_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/8KhZd3VQBtXTAznvKjw-kxsxEYwM7FgeyaSgU71cLG0.woff") format("woff");
+}
+
+@font-face {
+  font-family: "RalewaySemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12bxsxEYwM7FgeyaSgU71cLG0.woff") format("woff");
+}
+
+
+.mobile-nav-wrapper{
+  //position: fixed;
+  width:100%;
+  height: 100%;
+  //overflow: hidden;
+
+  @media screen and (min-width: $width-small) {
+    display : none;
+    }
+    .nav-icon{
+      position: absolute;
+      line-height: 1.4;
+      margin-left: 1.5em;
+      margin-top: 1.5em;
+      font-size: 1.5em;
+      display: block;
+      color: white;
+      z-index: 2048;
+      
+      text-shadow: 0px 0px 4px rgba(58, 58, 58, 0.34);
+      cursor: pointer;
+    }
+
+    .mobile-nav-content-wrapper{
+
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(28,21,19,.97);
+      z-index: 512;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      
+
+      .mobile-nav{
+        
+
+        position: relative;
+
+        text-align: center;
+
+        font-size: 24px;
+        letter-spacing: 2px;
+
+        line-height: 1em;
+        font-family: "RalewaySemiBold";
+        color: white;
+        
+        
+        z-index: 1024;
+
+        a:link,
+        a:visited{
+          color: white;
+          text-decoration: none;
+        }
+        .global-nav-item{
+          padding: .5em 0;
+          cursor: pointer;
+        }
+        .global-nav-item:hover,
+        .global-nav-item.active{
+          color: rgb(56, 255, 215);
+        }
+      }     
+    }
+}
+
+
+
+.header-wrapper{
+  position: relative;
+  background-color: #332c29;
+  @media screen and (min-width: $width-small){
+    padding-bottom: 2em;
+  }
+  
+
+  .indexLogoMedium{
+    
+    margin-top: 30px;
+    width: 100%;
+    height : auto;
+    @media screen and (max-width: $width-small){
+      position: relative;
+      width: 100%;
+    }
+    img {
+      position: relative;
+      width: 200px;
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      @media screen and (min-width: $width-large+50) {
+        display: none;
+      }
+      @media screen and (max-width: $width-small){
+        width: auto;
+        height: 4em;
+        z-index: 1025;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  .headerNav{
+
+
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:center;
+
+
+    a:link,
+    a:visited{
+      color: white;
+      text-decoration: none;
+    }
+    a:active{
+      color: $active-color;
+    }
+    .index{
+      font-size: 14px;
+      margin-top: 1em;
+      margin-left: 1em;
+      white-space: nowrap;
+      font-family: "RalewaySemiBold";
+      color: rgba(255, 255 , 255,0.9);
+      font-size: $fontSize - 1;
+      @media screen and (max-width: $width-small) {
+        display: none;
+      }
+    }
+    .index:hover{
+      color: $active-color;
+      cursor: pointer;
+    }
+    .indexLogoLarge{
+      position: relative;
+      margin-left: 1em;
+      img{
+        width: 200px;
+        max-width: 200px;
+        height: auto;
+        @media screen and (max-width: $width-large+50) {
+          display: none;
+        }
+      }
+
+    }
+  }
+}
+
+footer{
+  .st{
+    width: 100%;
+    height: 111px; 
+    background-color: #332c29;
+    .snss{}
+  }
+  .nd{
+    width: 100%;
+    //height: 287.5px;
+    background-color: rgba(28,21,19,.95);
+    //padding-bottom: 2em;
+    padding: 68px 34px;
+    @media screen and (max-width: $width-xsmall){
+      padding: 20px;
+    }
+    .info{
+      .navi{
+
+        display: flex;
+        @media screen and (max-width: $width-small){
+          flex-direction: column;
+        }
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items:center;
+        //margin-top: 7%;
+
+        .backtop{
+          display : none;
+          @media screen and ( max-width: $width-small ){
+            display: block;
+          }
+        }
+
+        a:link,
+        a:visited{
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        div{
+          margin-left: 1.5em;
+          letter-spacing: 2px;
+          font-size: 12px;
+          display: inline;
+          color: white;
+          cursor: pointer;
+        }
+        div:hover{
+          color: rgba(255,255,255,.4);
+        }
+      };
+      .addr{
+        div{
+          display: flex;
+          color: rgba(255,255,255,.3);
+          justify-content: center;
+          text-align: center;
+          line-height: 2em;
+          a{
+            color: rgba(255,255,255,.3);
+          }
+        }
+      };
+    }
+  }
+}
+
+
+
+.site{
+  font-family: "Raleway";
+  font-size: 15px;
+  line-height: 1.6em;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  font-style: normal;
+  color: rgba(28, 28, 28, 0.9);
+
+  .page{
+    overflow: hidden;
+    //background-color: lightblue;
+    //min-height: 720px;
+
+    .indexLogoMedium{
+      
+      margin-top: 30px;
+      width: 100%;
+      height : auto;
+      @media screen and (max-width: $width-small){
+        position: absolute;
+        width: 100%;
+
+      }
+      img {
+        width: 200px;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        @media screen and (min-width: $width-large+50) {
+          display: none;
+        }
+        @media screen and (max-width: $width-small){
+          width: auto;
+          height: 4em;
+          z-index: 1025;
+          position: relative;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    .headerNav{
+      @media screen and (max-width: $width-small) {
+        display: none;
+        }
+
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items:center;
+
+      a:link,
+      a:visited{
+        color: white;
+        text-decoration: none;
+      }
+      a:active{
+        color: $active-color;
+      }
+      .index{
+        margin-left: 1em;
+        white-space: nowrap;
+        font-family: "RalewaySemiBold";
+        color: white;
+        font-size: $fontSize - 1;
+      }
+      .index:hover{
+        color: $active-color;
+        cursor: pointer;
+      }
+      .indexLogoLarge{
+        margin-left: 1em;
+        img{
+          width: 200px;
+          max-width: 200px;
+          height: auto;
+          @media screen and (max-width: $width-large+50) {
+                display: none;
+            }
+        }
+
+      }
+    }
+  }
+  .page .welcome-wrapper{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    .welcome-background{
+      position: absolute;
+      background-image: url("/images/WelcomePage.png");
+      background-size: cover;
+      @media screen and (max-width: $width-small) {
+        background: url("/images/WelcomePage.png") no-repeat center center scroll;
+      }
+
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      .background-cover{
+        position: absolute;
+        background-color: rgba(32,23,19,0.7);
+        width: 100%;
+        height:100%;
+      }
+    }
+  }
+}

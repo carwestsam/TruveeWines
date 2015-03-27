@@ -34,6 +34,10 @@ truveeApp
 		console.log('OpenNewTab');
 		window.open( addr, '_blank');
 	}
+
+	$scope.Env.OpenNew = function( addr ){
+		window.open(addr, '_self');
+	}
 	
 	$scope.Env.scrollTo = function( eleId ){
     	console.log( eleId );

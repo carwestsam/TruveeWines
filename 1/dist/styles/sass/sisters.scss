@@ -29,27 +29,8 @@ $fontSize: 16px;
   src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12bxsxEYwM7FgeyaSgU71cLG0.woff") format("woff");
 }
 
-section.main {
-    font-size: 16px;
-    line-height: 1.4;
-    @media screen and (max-width: $width-large) {
-        float: left;
-        width: 65%;
-    }
-    @media screen and (max-width: $width-medium) {
-        float: none;
-        width: auto;
-    }
-    @media screen and (max-width: $width-small) {
-        font-size: 12px;
-        line-height: 1.4;
-    }
-}
 $active-color: #38FFD7;
 
-.container{
-	max-width: 1080px;
-}
 .index-section-wrapper{
 	max-width: 1080px;
 	padding: 100px 34px;
@@ -135,7 +116,6 @@ $active-color: #38FFD7;
 	width:100%;
 	height: 100%;
 	//overflow: hidden;
-
 
 	@media screen and (min-width: $width-small) {
 		display : none;
@@ -302,12 +282,14 @@ $active-color: #38FFD7;
 			@media screen and (max-width: $width-small) {
 				display: none;
     		}
+
 			margin-top: 30px;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			flex-wrap: wrap;
 			align-items:center;
+
 			a:link,
 			a:visited{
 				color: white;
@@ -490,7 +472,6 @@ $active-color: #38FFD7;
 			@media screen and (min-width: $width-small){
 				width: 83.3333%;
 			}
-			
 		}
 	}
 	.welcome-content{
@@ -562,6 +543,10 @@ $active-color: #38FFD7;
 		width: 100%;
 		height: auto;
 		overflow: hidden;
+
+		.carousel-indicators li{
+			margin-left: 1em;
+		}
 		img{
 
 		}
