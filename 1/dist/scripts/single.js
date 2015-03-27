@@ -8,7 +8,7 @@ singleApp
 		window.open( addr, '_blank');
 	}
 	$scope.Env.OpenNew = function( addr ){
-		window.open(addr);
+		window.open(addr, '_self');
 	}
 	$scope.Env.scrollTo = function( eleId ){
     	var ele = document.getElementById(eleId);
