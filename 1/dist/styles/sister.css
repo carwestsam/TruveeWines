@@ -29,6 +29,9 @@ section.main {
       font-size: 12px;
       line-height: 1.4; } }
 
+.container {
+  max-width: 1080px; }
+
 .index-section-wrapper {
   max-width: 1080px;
   padding: 100px 34px;
@@ -74,7 +77,10 @@ section.main {
     text-rendering: optimizelegibility;
     text-transform: uppercase; }
   .index-section-wrapper p {
-    font-size: 15px; }
+    font-size: 15px;
+    line-height: 1.6em;
+    letter-spacing: 0.4px;
+    font-weight: 500; }
   .index-section-wrapper blockquote {
     border-left-color: #1C1C1C;
     border-left-style: solid;
@@ -93,6 +99,10 @@ section.main {
     padding-left: 37.5px;
     padding-right: 37.5px;
     padding-top: 7.5px; }
+  .index-section-wrapper a:link,
+  .index-section-wrapper a:visited {
+    color: #38FFD7;
+    text-decoration: none; }
 
 .mobile-nav-wrapper {
   width: 100%;
@@ -174,6 +184,8 @@ section.main {
     cursor: pointer; }
   .global-nav-wrapper .global-nav .global-nav-item.active {
     color: #38ffd7; }
+  .global-nav-wrapper .global-nav .global-nav-item:hover {
+    color: #38FFD7; }
 
 .site {
   font-family: "Raleway";
@@ -263,7 +275,7 @@ section.main {
         background-color: rgba(32, 23, 19, 0.7);
         width: 100%;
         height: 100%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 640px) {
     .site .page .sister-section .left-content {
       display: block;
       margin-left: auto;
@@ -280,7 +292,7 @@ section.main {
     text-rendering: optimizelegibility; }
   .site .page .sister-section .left-content #sister-sign {
     width: 100%; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 640px) {
       .site .page .sister-section .left-content #sister-sign {
         display: block;
         margin-left: auto;
@@ -294,7 +306,7 @@ section.main {
     top: 27.2px; }
     .site .page .sister-section .right-content .image-wrapper {
       max-width: 498px; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 640px) {
         .site .page .sister-section .right-content .image-wrapper {
           display: block;
           margin-left: auto;
@@ -311,7 +323,7 @@ section.main {
           font-size: 12.38px;
           line-height: 1.68em;
           font-style: normal; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 640px) {
     .site .page .wineyard-section .left-content {
       display: block;
       margin-left: auto;
@@ -323,7 +335,7 @@ section.main {
     top: 27.2px; }
     .site .page .wineyard-section .right-content .image-wrapper {
       max-width: 498px; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 640px) {
         .site .page .wineyard-section .right-content .image-wrapper {
           display: block;
           margin-left: auto;
@@ -340,13 +352,22 @@ section.main {
           font-size: 12.38px;
           line-height: 1.68em;
           font-style: normal; }
-  @media screen and (max-width: 768px) {
+  .site .page .ChardonaryRedBlend h3 {
+    margin: 1.5em auto 0.3em; }
+  .site .page .ChardonaryRedBlend p {
+    margin-top: 1.5em; }
+  @media screen and (max-width: 640px) {
     .site .page .ChardonaryRedBlend .content {
       display: block;
       margin-top: 2em;
       margin-left: auto;
       margin-right: auto;
+      font-weight: 500;
+      font-style: normal;
       max-width: 498px; } }
+  @media screen and (min-width: 770px) {
+    .site .page .ChardonaryRedBlend .content {
+      width: 83.3333%; } }
   .site .welcome-content {
     color: white;
     display: flex;
@@ -502,7 +523,10 @@ section.main {
     width: 100%;
     background-color: rgba(28, 21, 19, 0.95);
     padding: 68px 34px; }
-    .site footer #nd #info #navi {
+    @media screen and (max-width: 640px) {
+      .site footer #nd {
+        padding: 20px; } }
+    .site footer #nd #info .navi {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -510,26 +534,33 @@ section.main {
       align-items: center;
       margin-top: 7%; }
       @media screen and (max-width: 770px) {
-        .site footer #nd #info #navi {
+        .site footer #nd #info .navi {
           flex-direction: column; } }
-      .site footer #nd #info #navi a:link,
-      .site footer #nd #info #navi a:visited {
+      .site footer #nd #info .navi .backtop {
+        display: none; }
+        @media screen and (max-width: 770px) {
+          .site footer #nd #info .navi .backtop {
+            display: block; } }
+      .site footer #nd #info .navi a:link,
+      .site footer #nd #info .navi a:visited {
         color: white;
         text-decoration: none;
         cursor: pointer; }
-      .site footer #nd #info #navi div {
+      .site footer #nd #info .navi div {
         margin-left: 1.5em;
         letter-spacing: 2px;
         font-size: 12px;
         display: inline;
         color: white;
         cursor: pointer; }
-      .site footer #nd #info #navi div:hover {
+      .site footer #nd #info .navi div:hover {
         color: rgba(255, 255, 255, 0.4); }
     .site footer #nd #info #addr div {
       display: flex;
       color: rgba(255, 255, 255, 0.3);
-      justify-content: center; }
+      justify-content: center;
+      text-align: center;
+      line-height: 2em; }
       .site footer #nd #info #addr div a {
         color: rgba(255, 255, 255, 0.3); }
   .site .welcome {

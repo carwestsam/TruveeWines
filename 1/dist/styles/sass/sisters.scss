@@ -1,4 +1,4 @@
-$width-xsmall: 768px;
+$width-xsmall: 640px;
 $width-small: 770px;
 $width-medium: 970px;
 $width-large: 1170px;
@@ -47,6 +47,9 @@ section.main {
 }
 $active-color: #38FFD7;
 
+.container{
+	max-width: 1080px;
+}
 .index-section-wrapper{
 	max-width: 1080px;
 	padding: 100px 34px;
@@ -97,6 +100,9 @@ $active-color: #38FFD7;
 	}
 	p {
 		font-size: 15px;
+		line-height: 1.6em;
+		letter-spacing: 0.4px;
+		font-weight: 500;
 	}
 	blockquote{
 		border-left-color: #1C1C1C;
@@ -117,6 +123,12 @@ $active-color: #38FFD7;
 		padding-right: 37.5px;
 		padding-top: 7.5px;
 	}
+	a:link,
+	a:visited{
+		color: $active-color;
+		text-decoration: none;
+	}
+
 }
 .mobile-nav-wrapper{
 	//position: fixed;
@@ -236,6 +248,9 @@ $active-color: #38FFD7;
 		}
 		.global-nav-item.active{
 			color: rgb(56, 255, 215);
+		}
+		.global-nav-item:hover{
+			color: $active-color;
 		}
 	}
 }
@@ -456,14 +471,26 @@ $active-color: #38FFD7;
 		}
 	}
 	.page .ChardonaryRedBlend{
+		h3{
+			margin: 1.5em auto 0.3em;
+		}
+		p {
+			margin-top: 1.5em;
+		}
 		.content{
 			@media screen and (max-width: $width-xsmall) {
 				display: block;
 				margin-top: 2em;
 				margin-left: auto;
 				margin-right: auto;
+				font-weight: 500;
+				font-style: normal;
 				max-width: $width-small-content;			
 			}
+			@media screen and (min-width: $width-small){
+				width: 83.3333%;
+			}
+			
 		}
 	}
 	.welcome-content{
@@ -674,8 +701,11 @@ $active-color: #38FFD7;
 			background-color: rgba(28,21,19,.95);
 			//padding-bottom: 2em;
 			padding: 68px 34px;
+			@media screen and (max-width: $width-xsmall){
+				padding: 20px;
+			}
 			#info{
-				#navi{
+				.navi{
 
 					display: flex;
 					@media screen and (max-width: $width-small){
@@ -686,6 +716,13 @@ $active-color: #38FFD7;
 					flex-wrap: wrap;
 					align-items:center;
 					margin-top: 7%;
+
+					.backtop{
+						display : none;
+						@media screen and ( max-width: $width-small ){
+							display: block;
+						}
+					}
 
 					a:link,
 					a:visited{
@@ -710,6 +747,8 @@ $active-color: #38FFD7;
 						display: flex;
 						color: rgba(255,255,255,.3);
 						justify-content: center;
+						text-align: center;
+						line-height: 2em;
 						a{
 							color: rgba(255,255,255,.3);
 						}
