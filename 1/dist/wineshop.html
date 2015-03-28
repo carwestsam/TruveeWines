@@ -19,9 +19,10 @@
         <link rel="stylesheet" type="text/css" href="styles/single.css">
         <link rel="stylesheet" type="text/css" href="styles/content.css">
     </head>
-    <body>
+
+
     <body ng-app="singleApp" ng-controller = "globalEnv">
-        <div class="header-wrapper" id="header-wrapper" ng-include="'templates/singleNav.html'">
+        <div class="header-wrapper" id="header-wrapper" ng-init="detail='CHARDONNAY DETAILS'" ng-include="'templates/singleNav.html'">
         </div>
 
         <div ng-include="'templates/wineshop.html'">
@@ -30,6 +31,6 @@
         <div class="footer-wrapper" id = "footer" ng-include="'templates/footer.html'">
         </div>
     </body>
-    </body>
+
 </html>
 

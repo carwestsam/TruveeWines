@@ -13,6 +13,11 @@
   font-style: normal;
   font-weight: 600;
   src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12bxsxEYwM7FgeyaSgU71cLG0.woff") format("woff"); }
+@font-face {
+  font-family: "RalewayThin";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Raleway Thin"), local("Raleway-Thin"), url("https://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWFtXRa8TVwTICgirnJhmVJw.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWD8E0i7KZn-EPnyo3HZu7kw.woff") format("woff"); }
 .index-section-wrapper {
   max-width: 1080px;
   padding: 100px 34px;
@@ -42,6 +47,9 @@
     font-weight: 600;
     font-style: normal;
     text-rendering: optimizelegibility; }
+    @media screen and (max-width: 640px) {
+      .index-section-wrapper h2 {
+        font-size: 24px; } }
   .index-section-wrapper h3 {
     color: #38FFD7;
     font-family: "RalewaySemiBold";
@@ -241,53 +249,73 @@
     position: relative;
     height: 100%;
     width: 100%; }
+    @media screen and (min-width: 1220px) {
+      .site .page .welcome-wrapper {
+        max-height: 906px; } }
+    @media screen and (max-width: 970px) {
+      .site .page .welcome-wrapper {
+        min-height: 800px; } }
+    @media screen and (max-width: 770px) {
+      .site .page .welcome-wrapper {
+        min-height: 500px; } }
     .site .page .welcome-wrapper .welcome-background {
       position: absolute;
-      background-image: url("/images/WelcomePage.png");
-      background-size: cover;
+      background: url("/images/WelcomePage.png") no-repeat center center scroll;
+      background-size: 100%;
       width: 100%;
       height: 100%;
       z-index: -1; }
+      @media screen and (max-width: 970px) {
+        .site .page .welcome-wrapper .welcome-background {
+          background-size: cover;
+          height: 100%;
+          min-height: 800px; } }
       @media screen and (max-width: 770px) {
         .site .page .welcome-wrapper .welcome-background {
-          background: url("/images/WelcomePage.png") no-repeat center center scroll; } }
+          background-size: cover;
+          height: 100%;
+          min-height: 500px; } }
       .site .page .welcome-wrapper .welcome-background .background-cover {
         position: absolute;
         background-color: rgba(32, 23, 19, 0.7);
         width: 100%;
         height: 100%; }
-  @media screen and (max-width: 640px) {
-    .site .page .sister-section .left-content {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 498px; } }
-  .site .page .sister-section .left-content h2 {
-    cursor: auto;
-    font-size: 32px;
-    line-height: 1.3em;
-    text-transform: none;
-    letter-spacing: 0px;
-    font-weight: 600;
-    font-style: normal;
-    text-rendering: optimizelegibility; }
-  .site .page .sister-section .left-content #sister-sign {
-    width: 100%; }
-    @media screen and (max-width: 640px) {
-      .site .page .sister-section .left-content #sister-sign {
+  .site .page .sister-section .left-content {
+    /*
+    h2{
+    	cursor: auto;
+    	font-size: 32px;
+    	line-height: 1.3em;
+    	text-transform: none;
+    	letter-spacing: 0px;
+    	font-weight: 600;
+    	font-style: normal;
+    	text-rendering: optimizelegibility;
+    }*/ }
+    @media screen and (max-width: 770px) {
+      .site .page .sister-section .left-content {
         display: block;
         margin-left: auto;
-        margin-right: auto; } }
-    .site .page .sister-section .left-content #sister-sign img {
+        margin-right: auto;
+        max-width: 498px; } }
+    .site .page .sister-section .left-content #sister-sign {
       width: 100%;
-      max-width: 500px; }
+      max-width: 379px; }
+      @media screen and (max-width: 640px) {
+        .site .page .sister-section .left-content #sister-sign {
+          display: block;
+          margin-left: auto;
+          margin-right: auto; } }
+      .site .page .sister-section .left-content #sister-sign img {
+        width: 100%;
+        max-width: 500px; }
   .site .page .sister-section .right-content {
     position: relative;
     width: 100%;
     top: 27.2px; }
     .site .page .sister-section .right-content .image-wrapper {
       max-width: 498px; }
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 770px) {
         .site .page .sister-section .right-content .image-wrapper {
           display: block;
           margin-left: auto;
@@ -304,7 +332,7 @@
           font-size: 12.38px;
           line-height: 1.68em;
           font-style: normal; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 770px) {
     .site .page .wineyard-section .left-content {
       display: block;
       margin-left: auto;
@@ -316,7 +344,7 @@
     top: 27.2px; }
     .site .page .wineyard-section .right-content .image-wrapper {
       max-width: 498px; }
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 770px) {
         .site .page .wineyard-section .right-content .image-wrapper {
           display: block;
           margin-left: auto;
@@ -358,7 +386,7 @@
     width: 100%;
     height: 50%;
     margin: auto;
-    top: 50%; }
+    top: 45%; }
     @media screen and (max-width: 775px) {
       .site .welcome-content {
         top: 40%; } }

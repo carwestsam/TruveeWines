@@ -13,6 +13,11 @@
   font-style: normal;
   font-weight: 600;
   src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12bxsxEYwM7FgeyaSgU71cLG0.woff") format("woff"); }
+@font-face {
+  font-family: "RalewayThin";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Raleway Thin"), local("Raleway-Thin"), url("https://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWFtXRa8TVwTICgirnJhmVJw.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWD8E0i7KZn-EPnyo3HZu7kw.woff") format("woff"); }
 .mobile-nav-wrapper {
   width: 100%;
   height: 100%; }
@@ -107,7 +112,7 @@
       color: #38FFD7; }
     .header-wrapper .headerNav .index {
       font-size: 14px;
-      margin-top: 1em;
+      margin-top: 0em;
       margin-left: 1em;
       white-space: nowrap;
       font-family: "RalewaySemiBold";
@@ -129,6 +134,62 @@
         @media screen and (max-width: 1220px) {
           .header-wrapper .headerNav .indexLogoLarge img {
             display: none; } }
+  .header-wrapper .welcome-content {
+    font-family: "RalewayThin";
+    color: white;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    top: 6em; }
+    @media screen and (max-width: 770px) {
+      .header-wrapper .welcome-content {
+        margin-top: 80px; } }
+    @media screen and (max-width: 775px) {
+      .header-wrapper .welcome-content {
+        top: 40%; } }
+    .header-wrapper .welcome-content .title {
+      text-align: center;
+      font-family: "RalewayThin";
+      font-size: 72px;
+      line-height: 1.2em;
+      font-weight: 100;
+      font-style: normal;
+      text-rendering: optimizelegibility;
+      cursor: auto; }
+      @media screen and (max-width: 770px) {
+        .header-wrapper .welcome-content .title {
+          font-size: 36px; } }
+    .header-wrapper .welcome-content .desc {
+      font-family: "RalewaySemiBold";
+      font-size: 18px;
+      letter-spacing: 3px;
+      color: #38FFD7; }
+      @media screen and (max-width: 775px) {
+        .header-wrapper .welcome-content .desc {
+          text-align: center; } }
+
+.header-wrapper.redblend {
+  background-color: pink;
+  padding-bottom: 0;
+  height: 538px;
+  background: url("/images/truveechardonnay.jpg") no-repeat center center scroll;
+  background-size: cover;
+  background-color: pink; }
+  @media screen and (max-width: 770px) {
+    .header-wrapper.redblend {
+      height: 360px; } }
+  .header-wrapper.redblend .header-nav-wrapper {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); }
+    @media screen and (max-width: 770px) {
+      .header-wrapper.redblend .header-nav-wrapper div.headerNav {
+        display: none; } }
+  .header-wrapper.redblend .mobile-nav-wrapper {
+    display: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 0px; }
 
 footer .st {
   width: 100%;

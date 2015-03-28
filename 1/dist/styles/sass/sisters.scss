@@ -28,6 +28,12 @@ $fontSize: 16px;
   font-weight: 600;
   src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12bxsxEYwM7FgeyaSgU71cLG0.woff") format("woff");
 }
+@font-face {
+  font-family: "RalewayThin";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Raleway Thin"), local("Raleway-Thin"), url("https://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWFtXRa8TVwTICgirnJhmVJw.woff2") format("woff2"), url("https://fonts.gstatic.com/s/raleway/v9/RJMlAoFXXQEzZoMSUteGWD8E0i7KZn-EPnyo3HZu7kw.woff") format("woff");
+}
 
 $active-color: #38FFD7;
 
@@ -61,6 +67,9 @@ $active-color: #38FFD7;
 		font-weight: 600;
 		font-style: normal;
 		text-rendering: optimizelegibility;
+		@media screen and ( max-width: $width-xsmall ){
+      		font-size: 24px;
+    	}
 	}
 	h3 {
 		color: $active-color;
@@ -327,12 +336,36 @@ $active-color: #38FFD7;
 		position: relative;
 		height: 100%;
 		width: 100%;
+		
+		@media screen and ( min-width: $width-large+50){
+			max-height: 906px;
+		}
+		@media screen and ( max-width: $width-medium ){
+			min-height: 800px;
+
+		}
+		@media screen and ( max-width: $width-small ){
+			min-height: 500px;
+		}
+		//max-height: 906px;
+
 		.welcome-background{
 			position: absolute;
-			background-image: url("/images/WelcomePage.png");
-			background-size: cover;
+			background: url("/images/WelcomePage.png") no-repeat center center scroll;
+			background-size:  100% ;
+			//background-size: cover;
+
+			@media screen and (max-width: $width-medium) {
+				//background: url("/images/WelcomePage.png") no-repeat center center scroll;
+				background-size: cover;
+				height: 100%;
+				min-height: 800px;
+			}
 			@media screen and (max-width: $width-small) {
-				background: url("/images/WelcomePage.png") no-repeat center center scroll;
+				//background: url("/images/WelcomePage.png") no-repeat center center scroll;
+				background-size: cover;
+				height: 100%;
+				min-height: 500px;
 			}
 
 			width: 100%;
@@ -350,12 +383,13 @@ $active-color: #38FFD7;
 
 	.page .sister-section{
 		.left-content{
-			@media screen and (max-width: $width-xsmall) {
+			@media screen and (max-width: $width-small) {
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
 				max-width: $width-small-content;			
 			}
+			/*
 			h2{
 				cursor: auto;
 				font-size: 32px;
@@ -365,9 +399,10 @@ $active-color: #38FFD7;
 				font-weight: 600;
 				font-style: normal;
 				text-rendering: optimizelegibility;
-			}
+			}*/
 			#sister-sign{
 				width:100%;
+				max-width: 379px;
 				@media screen and (max-width: $width-xsmall) {
 					display: block;
 					margin-left: auto;
@@ -387,7 +422,7 @@ $active-color: #38FFD7;
 			top: 1.7 * $fontSize;
 			.image-wrapper{
 				max-width:$width-small-content;
-				@media screen and (max-width: $width-xsmall) {
+				@media screen and (max-width: $width-small) {
 						display: block;
 						margin-left: auto;
 						margin-right: auto;
@@ -414,7 +449,7 @@ $active-color: #38FFD7;
 	}
 	.page .wineyard-section{
 		.left-content{
-			@media screen and (max-width: $width-xsmall) {
+			@media screen and (max-width: $width-small) {
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
@@ -429,7 +464,7 @@ $active-color: #38FFD7;
 
 			.image-wrapper{
 				max-width: $width-small-content;
-				@media screen and (max-width: $width-xsmall) {
+				@media screen and (max-width: $width-small) {
 						display: block;
 						margin-left: auto;
 						margin-right: auto;
@@ -484,7 +519,7 @@ $active-color: #38FFD7;
 		height: 50%;
 
 		margin: auto;
-		top : 50%;
+		top : 45%;
 
 		@media screen and (max-width: 775px){
 			top: 40%;

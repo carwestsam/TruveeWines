@@ -112,7 +112,8 @@ truveeApp
 	$scope.Main.pageHeight = $window.innerHeight;
 	$scope.Main.pageWidth = $window.innerWidth;
 
-	$scope.mainStyleHeight = "{'height':'" + ($scope.Main.pageWidth/1.77).toString() + "px'}";	$scope.mainStyleWidth = "{'height':'" + $scope.Main.pageWidth.toString() + "px'}";
+	$scope.mainStyleHeight = "{'height':'" + ($scope.Main.pageWidth/1.77).toString() + "px'}";
+	$scope.mainStyleWidth = "{'width':'" + $scope.Main.pageWidth.toString() + "px'}";
 } ])
 .controller( 'mcbrideCtrl', ['$scope','$sce', function($scope,$sce){
 

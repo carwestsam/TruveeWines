@@ -4,7 +4,6 @@
     <span class="glyphicon glyphicon-remove nav-icon" ng-show="MobileNav.disp" ng-click="MobileNav.disp = !MobileNav.disp"></span>
     <div class="mobile-nav-content-wrapper" ng-show="MobileNav.disp">
         <div class="mobile-nav"  >
-            
             <div class="global-nav-item {{globalNav.selectedNav == 'page_welcome'? 'active' : ''}}" id="page_welcome_gnav" ng-click="Env.OpenNew('/##page_welcome')">WELCOME</div>
             <div class="global-nav-item {{globalNav.selectedNav == 'page_sister'? 'active' : ''}}" id="page_sister_gnav" ng-click="Env.OpenNew('/##page_sister')">SISTERS STORY</div>
             <div class="global-nav-item {{globalNav.selectedNav == 'page_wineyard'? 'active' : ''}}" id="page_wineyard_gnav" ng-click="Env.OpenNew('/##page_wineyard')">VINEYARDS</div>
@@ -32,5 +31,6 @@
             <div class="index" ng-click="Env.OpenNew('/##page_contactus')">CONTACT US</div>
             <div class="index" ng-click="Env.OpenNew('/press.html')">PRESS RELEASE</div>
         </div>
+        <div class="welcome-content"> <h1 class="title">{{Env.details}}</h1> </div>
     </div>
 </div>
