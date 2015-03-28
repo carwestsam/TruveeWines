@@ -384,10 +384,9 @@
   .site .page .watchOurStory-section {
     position: relative;
     width: 100%;
-    height: 100%;
     overflow: hidden; }
     .site .page .watchOurStory-section img.video-background {
-      position: absolute; }
+      position: relative; }
     .site .page .watchOurStory-section div.content-video {
       position: absolute; }
     .site .page .watchOurStory-section div.playicon {
@@ -569,7 +568,8 @@
       text-align: center;
       line-height: 2em; }
       .site footer .nd .info .addr div a {
-        color: rgba(255, 255, 255, 0.3); }
+        color: rgba(255, 255, 255, 0.3);
+        text-decoration: underline; }
   .site .welcome {
     background-color: pink; }
 
