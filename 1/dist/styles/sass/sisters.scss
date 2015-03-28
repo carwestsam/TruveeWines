@@ -675,70 +675,98 @@ $active-color: #38FFD7;
 	footer{
 
 		#st{
-			width: 100%;
-			height: 111px; 
-			background-color: #332c29;
-			#snss{}
+		    width: 100%;
+		    height: 111px; 
+		    background-color: #332c29;
+		    padding-top: 10px;
+		    .snss{
+		      width: 100%;
+		      height: 100%;
+		      display: flex;
+		      flex-direction: row;
+		      justify-content: center;
+		      align-items:center;
+		      .sns-logo{
+		          margin-left: 1em;
+		          height: 32px;
+		          width: 32px;
+		          display : block;
+		          transition: background-color 0.5s ease;
+		          background-color: #332c29;
+		          border-radius: 50%;
+		          border-style: solid;
+		          border-width: 2.5px;
+		          border-color: white;
+		      }
+		      .sns-logo:hover{
+		          background-color: white;
+		      }
+		      .sns-logo .icon{
+		        fill: white;
+
+		      }
+		      .sns-logo:hover .icon{
+		        fill: #332c29;
+		      }
+		    }
 		}
-		#nd{
-			width: 100%;
-			//height: 287.5px;
-			background-color: rgba(28,21,19,.95);
-			//padding-bottom: 2em;
-			padding: 68px 34px;
-			@media screen and (max-width: $width-xsmall){
-				padding: 20px;
-			}
-			#info{
-				.navi{
-
+		.nd{
+		    width: 100%;
+		    //height: 287.5px;
+		    background-color: rgba(28,21,19,.95);
+		    //padding-bottom: 2em;
+		    padding: 68px 34px;
+		    @media screen and (max-width: $width-xsmall){
+		    	padding: 20px;
+		    }
+		    .info{
+		     	.navi{
 					display: flex;
-					@media screen and (max-width: $width-small){
+		        	@media screen and (max-width: $width-small){
 						flex-direction: column;
-					}
-					flex-direction: row;
-					justify-content: center;
-					flex-wrap: wrap;
-					align-items:center;
-					margin-top: 7%;
+		        	}
+			        flex-direction: row;
+			        justify-content: center;
+			        flex-wrap: wrap;
+			        align-items:center;
 
-					.backtop{
-						display : none;
-						@media screen and ( max-width: $width-small ){
-							display: block;
-						}
-					}
+			        .backtop{
+			          display : none;
+			          @media screen and ( max-width: $width-small ){
+			            display: block;
+			          }
+			        }
 
-					a:link,
-					a:visited{
-						color: white;
-						text-decoration: none;
-						cursor: pointer;
-					}
-					div{
-						margin-left: 1.5em;
-						letter-spacing: 2px;
-						font-size: 12px;
-						display: inline;
-						color: white;
-						cursor: pointer;
-					}
-					div:hover{
-						color: rgba(255,255,255,.4);
-					}
-				};
-				#addr{
-					div{
+			        a:link,
+			        a:visited{
+			          color: white;
+			          text-decoration: none;
+			          cursor: pointer;
+			        }
+			        div{
+			          margin-left: 1.5em;
+			          letter-spacing: 2px;
+			          font-size: 12px;
+			          display: inline;
+			          color: white;
+			          cursor: pointer;
+			        }
+			        div:hover{
+			          color: rgba(255,255,255,.4);
+			        }
+		    	}
+		      	.addr{
+		        	div{
 						display: flex;
 						color: rgba(255,255,255,.3);
 						justify-content: center;
 						text-align: center;
 						line-height: 2em;
 						a{
-							color: rgba(255,255,255,.3);
+		            		color: rgba(255,255,255,.3);
 						}
 					}
-				};
+				}
 			}
 		}
 	}
@@ -747,6 +775,115 @@ $active-color: #38FFD7;
 		background-color: pink;
 	}
 }
+
+.contactus-section{
+  h1{
+    text-align: left;
+    font-family: "Raleway";
+    font-size: 42px;
+    line-height: 1.1em;
+    text-transform: none;
+    letter-spacing: 0px;
+    font-weight: 200;
+    font-style: normal;
+    padding-bottom: 17px;
+  }
+
+  form{
+    padding-top: 17px;
+
+    .field-error{
+      color: #FFF;
+      background-color: #CC3B3B;
+      
+      padding: 5px 15px 3px 5px;
+      font-size: 13px;
+      border-radius: 2px;
+      margin: 12px 0px;
+      line-height: 23px;
+      display: inline-block;
+      
+
+      span{
+        font-size: 0.7em;
+        top: -0.1em;
+      }
+    }
+    .form-group{
+      label{
+        font-family: "Raleway";
+        font-size: 15px;
+        letter-spacing: .4px;
+        font-weight: 500;
+        font-style: normal;
+        color: rgba(28,28,28,.9);
+      }
+      span{
+        font-family: "Raleway";
+        font-size: 12px;
+        letter-spacing: .4px;
+        font-weight: 500;
+        font-style: normal;
+        color: rgba(28,28,28,.9);
+      }
+
+      .form-inline{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .form-control{
+        border-radius: 2px;
+        background-color: #fcfcfc;
+      }
+
+      textarea{
+        min-height: 100px;
+        resize: vertical;
+        overflow: auto;
+        vertical-align: top;
+      }
+
+      .btn{
+        font-family: "Raleway";
+          letter-spacing: .5px;
+          font-weight: 400;
+          font-style: normal;
+          color: #fff;
+          background-color: #272727;
+          border-color: #272727;
+          width: auto;
+          height: auto;
+          padding: 1em 2.5em;
+          border-width: 0;
+          text-align: center;
+          line-height: 1em;
+          font-size: 14px;
+          margin: 0;
+        border-radius: 300px;
+        transition: .1s opacity linear;
+      }
+    }
+    .form-group.warning{
+      label,
+      span {
+        color: #BD0000;
+      }
+      input,
+      textarea{
+        border: 1px solid #E99292;
+      }
+    }
+  }
+  form.warning{
+    padding-top: 17px;
+    
+
+
+
+  } 
+}
+
 
 #welcomePage {
 	font-family: Raleway;
