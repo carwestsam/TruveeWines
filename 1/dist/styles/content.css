@@ -87,7 +87,8 @@
   .index-section-wrapper a:link,
   .index-section-wrapper a:visited {
     color: #38FFD7;
-    text-decoration: none; }
+    text-decoration: none;
+    word-wrap: break-word; }
 
 .sister-section .left-content {
   /*h2{

@@ -112,6 +112,7 @@ $active-color: #38FFD7;
   a:visited{
     color: $active-color;
     text-decoration: none;
+    word-wrap:break-word;
   }
 }
 
