@@ -19,7 +19,7 @@
 
 
 
-        <!--<script>
+        <script>
             age_gate_settings = {
                 default_fail_url: 'http://www.drinkiq.com',
                 default_lang: 'en',
@@ -64,7 +64,7 @@
             <img alt="Notification: Please enable JavaScript and reload this page. Truvee Wines requires all users to enter their date of birth and country for
     verification of legal drinking age." width="800" height="280" src="http://www.diageoagegate.com/nojs-bg.png">
         </div>
-    </noscript>-->
+    </noscript>
 
 
 
@@ -79,7 +79,9 @@
         <div class="mobile-nav-wrapper" ng-controller="mobileNav">
             
             <span class="glyphicon glyphicon glyphicon-menu-hamburger nav-icon" ng-click="MobileNav.disp = !MobileNav.disp" ng-hide="MobileNav.disp" ></span>
+
             <span class="glyphicon glyphicon-remove nav-icon" ng-show="MobileNav.disp" ng-click="MobileNav.disp = !MobileNav.disp"></span>
+
             <div class="mobile-nav-content-wrapper" ng-show="MobileNav.disp">
                 <div class="mobile-nav"  >
                     
@@ -102,7 +104,7 @@
                         <div class="welcome-background"><div class="background-cover"></div>
                         </div>
                         <div class="container">
-                            <div class="indexLogoMedium"> <img src="/images/TRUVEE_title.png" alt=""> </div>
+                            <div class="indexLogoMedium"> <a><img src="/images/TRUVEE_title.png" alt=""></a> </div>
                             <div class="headerNav" ng-include="'templates/headerNav.html'">
 
                             </div>
@@ -428,7 +430,7 @@
                             <div class="addr">
                                 <div>PLEASE ENJOY OUR WINES RESPONSIBLY</div>
                                 <div>©2015 TRUVÉE WINES, SONOMA, CA</div>
-                                <div><a href="http://www.mcbridesisters.com/">MCBRIDESISTERS WEBSITE</a></div>
+                                <div><a href="http://www.mcbridesisters.com/" target="_blank">MCBRIDESISTERS WEBSITE</a></div>
                             </div>
                         </div>
                     </div>
