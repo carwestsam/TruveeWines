@@ -411,17 +411,20 @@
           text-align: center; } }
   .site .page .watchOurStory-section {
     position: relative;
-    width: 100%;
-    overflow: hidden; }
+    width: 100%; }
     .site .page .watchOurStory-section img.video-background {
       position: relative; }
     .site .page .watchOurStory-section div.content-video {
-      position: absolute; }
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 512; }
     .site .page .watchOurStory-section div.playicon {
       position: absolute;
       height: 48px;
       width: 48px;
       margin: auto;
+      cursor: pointer;
       top: 0;
       left: 0;
       right: 0;

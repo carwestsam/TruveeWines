@@ -118,16 +118,20 @@ truveeApp
 .controller( 'mcbrideCtrl', ['$scope','$sce', function($scope,$sce){
 
 	$scope.mcbride = {}
-	$scope.mcbride.iframeContent = '<iframe mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/121415789?wmode=opaque&amp;api=1" width="' + $scope.Main.pageWidth.toString() + '" webkitallowfullscreen="" frameborder="0" title="&quot; To Find&quot; The Story of The McBride Sisters &amp; Truvée Wines" height="' + $scope.Main.pageHeight.toString() +'"></iframe>';
+	//$scope.mcbride.iframeContent = '<iframe mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/121415789?wmode=opaque&amp;api=1" width="' + $scope.Main.pageWidth.toString() + '" webkitallowfullscreen="" frameborder="0" title="&quot; To Find&quot; The Story of The McBride Sisters &amp; Truvée Wines" height="' + $scope.Main.pageHeight.toString() +'"></iframe>';
+	
 	$scope.mcbride.iframeDisplay = "";
 	$scope.mcbride.videoPlayIconDisplay = true;
 	$scope.mcbride.clickFunc=function(){
+		$scope.mcbride.iframeContent = '<iframe mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/121415789?wmode=opaque&amp;api=1" width="' + $scope.Main.pageWidth.toString() + '" webkitallowfullscreen="" frameborder="0" title="&quot; To Find&quot; The Story of The McBride Sisters &amp; Truvée Wines" height="'+ document.getElementById('videoBackground').style.height+'"></iframe>';
 		console.log('here!!')
+		console.log($scope.mcbride.iframeContent);
 		$scope.mcbride.videoPlayIconDisplay = false;
 		$scope.mcbride.iframeDisplay = $scope.mcbride.iframeContent;
 	}
 	$scope.mcbride.trustDangriousSnippet = function(){
-		console.log("great");
+		console.log("trusted");
+		console.log($scope.mcbride.iframeContent);
 		return $sce.trustAsHtml($scope.mcbride.iframeDisplay);
 	}
 }])
