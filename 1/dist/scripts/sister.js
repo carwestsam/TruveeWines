@@ -21,7 +21,7 @@ var truveeApp = angular.module('truveeApp', ['ui.bootstrap', 'ngSanitize', 'duSc
 truveeApp
 .controller( 'globalEnv', ['$scope', '$window', '$document', function( $scope, $window, $document){
 	$scope.Env = {}
-	$scope.Env.pageIds = ['page_welcome', 'page_sisters', 'page_wineyard', 'page_redblend','page_social', /*'page_locator',*/ 'page_contactus', ];
+	$scope.Env.pageIds = ['page_welcome', 'page_sisters', 'page_vineyards', 'page_redblend','page_social', /*'page_locator',*/ 'page_contactus', ];
 	$scope.Env.pageHeights = []
 	for ( ids in $scope.Env.pageIds ){
 		var t = $scope.Env.pageIds[ids];
@@ -123,7 +123,7 @@ truveeApp
 	$scope.mcbride.iframeDisplay = "";
 	$scope.mcbride.videoPlayIconDisplay = true;
 	$scope.mcbride.clickFunc=function(){
-		$scope.mcbride.iframeContent = '<iframe mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/121415789?wmode=opaque&amp;api=1" width="' + $scope.Main.pageWidth.toString() + '" webkitallowfullscreen="" frameborder="0" title="&quot; To Find&quot; The Story of The McBride Sisters &amp; Truvée Wines" height="'+ document.getElementById('videoBackground').style.height+'"></iframe>';
+		$scope.mcbride.iframeContent = '<iframe mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/121415789?wmode=opaque&amp;api=1&amp;autopaly=1" width="' + $scope.Main.pageWidth.toString() + '" webkitallowfullscreen="" frameborder="0" title="&quot; To Find&quot; The Story of The McBride Sisters &amp; Truvée Wines" height="'+ document.getElementById('videoBackground').style.height+'"></iframe>';
 		console.log('here!!')
 		console.log($scope.mcbride.iframeContent);
 		$scope.mcbride.videoPlayIconDisplay = false;
