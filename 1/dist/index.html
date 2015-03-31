@@ -11,6 +11,7 @@
         <title>  Truvée Wines </title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
         <script src="scripts/angular.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="scripts/angular-sanitize.min.js" type="text/javascript" charse="utf-8"></script>
         <script src="scripts/angular-scroll.min.js" type="text/javascript" charset="utf-8"></script>
@@ -54,7 +55,7 @@
                 <div class="mobile-nav"  >
                     
                     <div class="global-nav-item {{globalNav.selectedNav == 'page_welcome'? 'active' : ''}}" id="page_welcome_gnav" ng-click="MobileNav.scrollTo('page_welcome')">WELCOME</div>
-                    <div class="global-nav-item {{globalNav.selectedNav == 'page_sister'? 'active' : ''}}" id="page_sister_gnav" ng-click="MobileNav.scrollTo('page_sister')">SISTERS STORY</div>
+                    <div class="global-nav-item {{globalNav.selectedNav == 'page_sisters'? 'active' : ''}}" id="page_sister_gnav" ng-click="MobileNav.scrollTo('page_sisters')">SISTERS STORY</div>
                     <div class="global-nav-item {{globalNav.selectedNav == 'page_wineyard'? 'active' : ''}}" id="page_wineyard_gnav" ng-click="MobileNav.scrollTo('page_wineyard')">VINEYARDS</div>
                     <div class="global-nav-item {{globalNav.selectedNav == 'page_redblend'? 'active' : ''}}" id="page_redblend_gnav" ng-click="MobileNav.scrollTo('page_redblend')">WINE SHOP</div>
                     <div class="global-nav-item {{globalNav.selectedNav == 'page_social'? 'active' : ''}}" ng-click="MobileNav.scrollTo('page_social')">SOCIAL</div>
@@ -89,7 +90,7 @@
                     </div>
                 </div>
             </div>
-            <div class="page " id="page_sister" name="page_sister">
+            <div class="page " id="page_sisters" name="page_sisters">
                 
                 <div class="sister-section">
                     <div class="container index-section-wrapper">
@@ -385,7 +386,7 @@
                         <div class="container">
                             <div class="navi">
                                 <div ng-click="Env.scrollTo('page_welcome')" class="backtop">BACK TO TOP</div>
-                                <div ng-click="Env.OpenNew('/sisterstory.html')">SISTERS STORY</div>
+                                <div ng-click="Env.OpenNew('/sistersstory.html')">SISTERS STORY</div>
                                 <div ng-click="Env.OpenNew('/vineyards.html')">VINEYARDS</div>
                                 <div ng-click="Env.OpenNew('/wineshop.html')">WINE SHOP</div>
                                 <div ng-click="Env.OpenNew('/contactus.html')">CONTACT US</div>
