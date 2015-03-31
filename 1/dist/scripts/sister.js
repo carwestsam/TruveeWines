@@ -157,7 +157,7 @@ truveeApp
     	$document.scrollToElement( ele, 0, 1500 );
     }
 }])
-.controller('ContactCtrl', ['$scope', function($scope){
+.controller('ContactCtrl', ['$scope', '$http', function($scope, $http){
 	$scope.Contact = {};
 	$scope.Contact.firstName = "";
 	$scope.Contact.lastName = "";
@@ -176,6 +176,7 @@ truveeApp
 	$scope.Error.form = 0;
 
 	$scope.ContactCtrl.btnClickFunc = function(){
+            console.log('at btnclick');
 		$scope.ContactCtrl.btnText = "Submitting...";
 		if ( $scope.Contact.firstName.length > 0 || $scope.Contact.lastName.length > 0 ){
 			$scope.Error.name = 0;
@@ -202,11 +203,22 @@ truveeApp
 
 		console.log( $scope.Contact, $scope.Error )
 		if ( $scope.Error.name == 0 && $scope.Error.email == 0 && $scope.Error.sub == 0 && $scope.Error.msg == 0 ){
-			$scope.Error.form = 0;
-			$scope.ContactCtrl.btnText = "Submit";
+		    $scope.Error.form = 0;
+                    $http
+                        .post( '/sendmail.php',  $scope.Contact )
+                        .success( function( data, status, headers, config ){
+                            console.log('sendsuccess', data);
+                            $scope.ContactCtrl.btnText = "Submited";
+                            if ( data =='success' ){
+                                document.getElementById('form').innerHTML='<p>Thank You!</p><br/><br/>';
+                            }
+                        } )
+                        .error( function( data, status, headers, config ){
+                            console.log('sendfailed');
+                            $scope.ContactCtrl.btnText = "Submit";
+                        } )
 		}else {
 			$scope.Error.form = 1;
-			
 		}
 	}
 	console.log('hello Contact');
