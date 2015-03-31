@@ -3,8 +3,8 @@
                 default_fail_url: 'http://www.drinkiq.com',
                 default_lang: 'en',
                 default_country: 'US',
-                terms_url: '/terms-and-conditions/',
-                privacy_url: '/privacy-policy-and-cookie-notice/',
+                terms_url: '/terms-and-conditions.html',
+                privacy_url: '/privacy-policy-and-cookie-notice.html',
                 site_name: 'Truvee Wines',
                 style: {
                     overlay_opacity: '80',
