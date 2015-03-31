@@ -266,4 +266,11 @@
 .contactus-section form.warning {
   padding-top: 17px; }
 
+.privacy-section {
+  font-size: 12px;
+  font-family: sans-serif;
+  line-height: 17.15px; }
+  .privacy-section p {
+    font-size: 12px; }
+
 /*# sourceMappingURL=content.css.map */
