@@ -3,7 +3,7 @@
 $json = file_get_contents('php://input');
 $obj=json_decode($json);
 
-$message="Client :\t$obj->firstName $obj->lastName ( $obj->email )\r\nSubject :\t$obj->subject \r\nMessage :\t$obj->message";
+$message="Name/Email :\t$obj->firstName $obj->lastName ( $obj->email )\r\nSubject :\t$obj->subject \r\nMessage :\t$obj->message";
 
 $recipient='willie.chiu@thoriumdigital.com';
 $subject='Truvee Wines Contact Us Form';
