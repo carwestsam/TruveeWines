@@ -123,7 +123,7 @@ truveeApp
 	$scope.mcbride.iframeDisplay = "";
 	$scope.mcbride.videoPlayIconDisplay = true;
 	$scope.mcbride.clickFunc=function(){
-		$scope.mcbride.iframeContent = '<iframe mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/121415789?wmode=opaque&amp;api=1&amp;autopaly=1" width="' + $scope.Main.pageWidth.toString() + '" webkitallowfullscreen="" frameborder="0" title="&quot; To Find&quot; The Story of The McBride Sisters &amp; Truvée Wines" height="'+ document.getElementById('videoBackground').style.height+'"></iframe>';
+		$scope.mcbride.iframeContent = '<iframe mozallowfullscreen="" allowfullscreen="" src="https://player.vimeo.com/video/121415789?wmode=opaque&amp;api=1&amp;autoplay=1" width="' + $scope.Main.pageWidth.toString() + '" webkitallowfullscreen="" frameborder="0" title="&quot; To Find&quot; The Story of The McBride Sisters &amp; Truvée Wines" height="'+ document.getElementById('videoBackground').style.height+'"></iframe>';
 		console.log('here!!')
 		console.log($scope.mcbride.iframeContent);
 		$scope.mcbride.videoPlayIconDisplay = false;
