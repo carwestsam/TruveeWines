@@ -417,8 +417,7 @@
     .site .page .watchOurStory-section div.content-video {
       position: absolute;
       top: 0;
-      left: 0;
-      z-index: 512; }
+      left: 0; }
     .site .page .watchOurStory-section div.playicon {
       position: absolute;
       height: 48px;
