@@ -1,0 +1,11 @@
+carousel slide{
+	opacity: 0;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	transition-property: opacity;
+}
+
+carousel slide .active{
+	opacity: 1;
+}
